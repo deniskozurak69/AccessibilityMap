@@ -1,0 +1,542 @@
+@{
+    ViewData["Title"] = "Навчання моделей";
+}
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: #1e293b;
+            border-bottom: 1px solid #334155;
+            padding: 0.75rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header h1 { font-size: 1.1rem; font-weight: 700; color: #f1f5f9; }
+
+        .header-nav { display: flex; gap: 0.5rem; }
+
+        .nav-btn {
+            padding: 0.4rem 0.9rem;
+            border-radius: 0.375rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+            cursor: pointer;
+            border: 1px solid #475569;
+            background: transparent;
+            color: #94a3b8;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .nav-btn:hover { border-color: #94a3b8; color: #f1f5f9; }
+        .nav-btn.active { background: #3b82f6; border-color: #3b82f6; color: white; }
+
+        .content { padding: 2rem; max-width: 1200px; margin: 0 auto; }
+
+        /* ── Секція заголовку ── */
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #f1f5f9;
+        }
+
+        .section-subtitle {
+            font-size: 0.75rem;
+            color: #64748b;
+            margin-top: 0.2rem;
+        }
+
+        /* ── Кнопки ── */
+        .btn {
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .btn-primary { background: #1d4ed8; color: white; }
+        .btn-primary:hover { background: #1e40af; }
+        .btn-primary:disabled { opacity: 0.5; cursor: default; }
+
+        .btn-success { background: #065f46; color: #34d399; border: 1px solid #059669; }
+        .btn-success:hover { background: #047857; }
+        .btn-success:disabled { opacity: 0.5; cursor: default; }
+
+        .btn-outline {
+            background: transparent;
+            color: #94a3b8;
+            border: 1px solid #475569;
+        }
+        .btn-outline:hover { border-color: #94a3b8; color: #f1f5f9; }
+
+        /* ── Сітка класифікаторів ── */
+        .classifiers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .classifier-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 0.75rem;
+            padding: 1.25rem;
+            transition: border-color 0.2s;
+        }
+
+        .classifier-card:hover { border-color: #475569; }
+
+        .classifier-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .classifier-name {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #f1f5f9;
+        }
+
+        .classifier-id {
+            font-size: 0.7rem;
+            color: #475569;
+            font-family: monospace;
+        }
+
+        /* ── Статус моделі ── */
+        .model-status {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .status-badge {
+            padding: 0.2rem 0.5rem;
+            border-radius: 9999px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        .status-gcs-ok   { background: #064e3b; color: #34d399; border: 1px solid #059669; }
+        .status-gcs-no   { background: #1e293b; color: #475569; border: 1px solid #334155; }
+        .status-local-ok { background: #1e3a5f; color: #60a5fa; border: 1px solid #2563eb; }
+        .status-local-no { background: #1e293b; color: #475569; border: 1px solid #334155; }
+
+        /* ── Дії картки ── */
+        .classifier-actions {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        /* ── Секція завдань ── */
+        .jobs-section {
+            margin-top: 2rem;
+        }
+
+        .jobs-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.8rem;
+        }
+
+        .jobs-table th {
+            text-align: left;
+            padding: 0.75rem 1rem;
+            background: #1e293b;
+            color: #64748b;
+            font-weight: 500;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 1px solid #334155;
+        }
+
+        .jobs-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #1e293b;
+            color: #e2e8f0;
+            vertical-align: middle;
+        }
+
+        .jobs-table tr:hover td { background: #1e293b; }
+
+        .job-state {
+            padding: 0.2rem 0.5rem;
+            border-radius: 9999px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        .state-running    { background: #1e3a5f; color: #60a5fa; }
+        .state-succeeded  { background: #064e3b; color: #34d399; }
+        .state-failed     { background: #450a0a; color: #f87171; }
+        .state-pending    { background: #3f2b00; color: #fbbf24; }
+        .state-cancelled  { background: #1e293b; color: #64748b; }
+
+        /* ── Toast ── */
+        .toast {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            padding: 0.75rem 1.25rem;
+            border-radius: 0.5rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            z-index: 9999;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s;
+        }
+
+        .toast.show { transform: translateY(0); opacity: 1; }
+        .toast.success { background: #065f46; color: #34d399; border: 1px solid #059669; }
+        .toast.error   { background: #450a0a; color: #f87171; border: 1px solid #dc2626; }
+        .toast.info    { background: #1e3a5f; color: #60a5fa; border: 1px solid #2563eb; }
+
+        .loading-spinner {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @@keyframes spin { to { transform: rotate(360deg); } }
+
+        .empty-state {
+            text-align: center;
+            padding: 3rem;
+            color: #475569;
+            font-size: 0.875rem;
+        }
+
+        .refresh-btn {
+            padding: 0.35rem 0.75rem;
+            font-size: 0.75rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>🤖 Навчання ML-моделей</h1>
+    <div class="header-nav">
+        <a href="/Admin/Reports"  class="nav-btn">📋 Звіти</a>
+        <a href="/Admin/Roads"    class="nav-btn">🗺️ Дороги</a>
+        <a href="/Admin/Training" class="nav-btn active">🤖 Моделі</a>
+    </div>
+</div>
+
+<div class="content">
+
+    <!-- Класифікатори -->
+    <div class="section-header">
+        <div>
+            <div class="section-title">Класифікатори</div>
+            <div class="section-subtitle">Керування ML-моделями на Vertex AI</div>
+        </div>
+        <div style="display:flex; gap:0.5rem;">
+            <button class="btn btn-outline refresh-btn" onclick="loadClassifiers()">🔄 Оновити</button>
+            <button class="btn btn-success" onclick="downloadAllModels()" id="btnDownloadAll">
+                ⬇️ Завантажити всі моделі
+            </button>
+        </div>
+    </div>
+
+    <div class="classifiers-grid" id="classifiersGrid">
+        <div class="empty-state">⏳ Завантаження...</div>
+    </div>
+
+    <!-- Завдання -->
+    <div class="jobs-section">
+        <div class="section-header">
+            <div>
+                <div class="section-title">Останні завдання</div>
+                <div class="section-subtitle">Vertex AI Custom Training Jobs</div>
+            </div>
+            <button class="btn btn-outline refresh-btn" onclick="loadJobs()">🔄 Оновити</button>
+        </div>
+
+        <div style="background:#1e293b; border:1px solid #334155; border-radius:0.75rem; overflow:hidden;">
+            <table class="jobs-table">
+                <thead>
+                    <tr>
+                        <th>Назва завдання</th>
+                        <th>Статус</th>
+                        <th>Створено</th>
+                        <th>Завершено</th>
+                        <th>Дії</th>
+                    </tr>
+                </thead>
+                <tbody id="jobsTableBody">
+                    <tr><td colspan="5" class="empty-state">⏳ Завантаження...</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+    // ── Завантаження класифікаторів ───────────────────────────────────────────
+    async function loadClassifiers() {
+        try {
+            const res = await fetch('/api/training/classifiers');
+            if (!res.ok) throw new Error(await res.text());
+            const classifiers = await res.json();
+            renderClassifiers(classifiers);
+        } catch (e) {
+            document.getElementById('classifiersGrid').innerHTML =
+                `<div class="empty-state">❌ Помилка: ${e.message}</div>`;
+        }
+    }
+
+    function renderClassifiers(classifiers) {
+        const grid = document.getElementById('classifiersGrid');
+
+        grid.innerHTML = classifiers.map(clf => `
+            <div class="classifier-card">
+                <div class="classifier-header">
+                    <div>
+                        <div class="classifier-name">${getEmoji(clf.id)} ${clf.name}</div>
+                        <div class="classifier-id">${clf.modelName}</div>
+                    </div>
+                </div>
+
+                <div class="model-status">
+                    <span class="status-badge ${clf.modelInGcs ? 'status-gcs-ok' : 'status-gcs-no'}">
+                        ☁️ GCS: ${clf.modelInGcs ? 'є' : 'немає'}
+                    </span>
+                    <span class="status-badge ${clf.modelLocal ? 'status-local-ok' : 'status-local-no'}">
+                        💻 Локально: ${clf.modelLocal ? 'є' : 'немає'}
+                    </span>
+                </div>
+
+                <div class="classifier-actions">
+                    <button class="btn btn-primary" onclick="startTraining('${clf.id}')"
+                            id="btn-train-${clf.id}">
+                        ▶️ Запустити навчання
+                    </button>
+                    ${clf.modelInGcs ? `
+                        <button class="btn btn-success" onclick="downloadModel('${clf.id}')"
+                                id="btn-download-${clf.id}">
+                            ⬇️ Завантажити
+                        </button>
+                    ` : ''}
+                </div>
+            </div>
+        `).join('');
+    }
+
+    // ── Запуск навчання ───────────────────────────────────────────────────────
+    async function startTraining(classifierId) {
+        if (!confirm(`Запустити навчання для "${classifierId}"?\nЦе може коштувати ~$1-2 на Vertex AI.`))
+            return;
+
+        const btn = document.getElementById(`btn-train-${classifierId}`);
+        btn.disabled = true;
+        btn.innerHTML = `<span class="loading-spinner"></span> Запуск...`;
+
+        try {
+            const res = await fetch(`/api/training/start/${classifierId}`, { method: 'POST' });
+            const data = await res.json();
+
+            if (!res.ok) {
+                showToast('Помилка: ' + data.message, 'error');
+                return;
+            }
+
+            showToast(`✅ ${data.message}`, 'success');
+            setTimeout(loadJobs, 2000);
+        } catch (e) {
+            showToast('Помилка: ' + e.message, 'error');
+        } finally {
+            btn.disabled = false;
+            btn.innerHTML = '▶️ Запустити навчання';
+        }
+    }
+
+    // ── Завантаження моделі ───────────────────────────────────────────────────
+    async function downloadModel(classifierId) {
+        const btn = document.getElementById(`btn-download-${classifierId}`);
+        btn.disabled = true;
+        btn.innerHTML = `<span class="loading-spinner"></span> Завантаження...`;
+
+        try {
+            const res = await fetch(`/api/training/download/${classifierId}`, { method: 'POST' });
+            const data = await res.json();
+
+            if (!res.ok) {
+                showToast('Помилка: ' + data.message, 'error');
+                return;
+            }
+
+            showToast(`✅ ${data.message}`, 'success');
+            await loadClassifiers();
+        } catch (e) {
+            showToast('Помилка: ' + e.message, 'error');
+        } finally {
+            btn.disabled = false;
+            btn.innerHTML = '⬇️ Завантажити';
+        }
+    }
+
+    // ── Завантажити всі моделі ────────────────────────────────────────────────
+    async function downloadAllModels() {
+        const btn = document.getElementById('btnDownloadAll');
+        btn.disabled = true;
+        btn.innerHTML = `<span class="loading-spinner"></span> Завантаження...`;
+
+        try {
+            const res = await fetch('/api/training/download-all', { method: 'POST' });
+            const data = await res.json();
+
+            const ok    = data.results.filter(r => r.status === 'ok').length;
+            const error = data.results.filter(r => r.status === 'error').length;
+
+            showToast(`✅ Завантажено: ${ok}, помилок: ${error}`, ok > 0 ? 'success' : 'error');
+            await loadClassifiers();
+        } catch (e) {
+            showToast('Помилка: ' + e.message, 'error');
+        } finally {
+            btn.disabled = false;
+            btn.innerHTML = '⬇️ Завантажити всі моделі';
+        }
+    }
+
+    // ── Завантаження завдань ──────────────────────────────────────────────────
+    async function loadJobs() {
+        try {
+            const res = await fetch('/api/training/jobs');
+            if (!res.ok) throw new Error(await res.text());
+            const jobs = await res.json();
+            renderJobs(jobs);
+        } catch (e) {
+            document.getElementById('jobsTableBody').innerHTML =
+                `<tr><td colspan="5" class="empty-state">❌ Помилка: ${e.message}</td></tr>`;
+        }
+    }
+
+    function renderJobs(jobs) {
+        const tbody = document.getElementById('jobsTableBody');
+
+        if (!jobs || jobs.length === 0) {
+            tbody.innerHTML = `<tr><td colspan="5" class="empty-state">Завдань поки немає</td></tr>`;
+            return;
+        }
+
+        tbody.innerHTML = jobs.map(job => `
+            <tr>
+                <td style="font-family:monospace; font-size:0.75rem;">${job.name}</td>
+                <td><span class="job-state ${getStateClass(job.state)}">${translateState(job.state)}</span></td>
+                <td style="color:#64748b;">${job.createTime || '—'}</td>
+                <td style="color:#64748b;">${job.endTime || '—'}</td>
+                <td>
+                    <button class="btn btn-outline" style="padding:0.25rem 0.6rem; font-size:0.7rem;"
+                            onclick="checkStatus('${job.fullNameBase64}')">
+                        🔍 Статус
+                    </button>
+                </td>
+            </tr>
+        `).join('');
+    }
+
+            async function checkStatus(jobNameBase64) {
+            try {
+                const res = await fetch(`/api/training/status/${jobNameBase64}`);
+                const data = await res.json();
+                if (!res.ok) {
+                    showToast('Помилка: ' + data.message, 'error');
+                    return;
+                }
+                const msg = `Завдання: ${data.name}\nСтатус: ${translateState(data.state)}\nСтворено: ${data.createTime || '—'}\nЗавершено: ${data.endTime || '—'}\n${data.error ? 'Помилка: ' + data.error : ''}`;
+                prompt('Скопіюй текст:', msg);
+            } catch (e) {
+                showToast('Помилка: ' + e.message, 'error');
+            }
+        }
+
+    // ── Допоміжні функції ─────────────────────────────────────────────────────
+    function getEmoji(id) {
+        const emojis = {
+            ramp: '♿', lit: '💡', smoothness: '🛣️',
+            width: '↔️', tactile: '👣',
+            surface_quality: '⭐', surface_type: '🪨'
+        };
+        return emojis[id] || '🤖';
+    }
+
+    function getStateClass(state) {
+        const s = (state || '').toLowerCase();
+        if (s.includes('running'))   return 'state-running';
+        if (s.includes('succeeded')) return 'state-succeeded';
+        if (s.includes('failed'))    return 'state-failed';
+        if (s.includes('cancelled')) return 'state-cancelled';
+        return 'state-pending';
+    }
+
+    function translateState(state) {
+        const map = {
+            'JOB_STATE_RUNNING':    'Виконується',
+            'JOB_STATE_SUCCEEDED':  'Завершено ✓',
+            'JOB_STATE_FAILED':     'Помилка',
+            'JOB_STATE_CANCELLED':  'Скасовано',
+            'JOB_STATE_PENDING':    'Очікує',
+            'JOB_STATE_QUEUED':     'В черзі',
+        };
+        return map[state] || state;
+    }
+
+    function showToast(msg, type = 'info') {
+        const t = document.getElementById('toast');
+        t.textContent = msg;
+        t.className = `toast ${type} show`;
+        setTimeout(() => t.classList.remove('show'), 4000);
+    }
+
+    // ── Автооновлення кожні 30 секунд ────────────────────────────────────────
+    loadClassifiers();
+    loadJobs();
+    setInterval(loadJobs, 30000);
+</script>
+</body>
+</html>

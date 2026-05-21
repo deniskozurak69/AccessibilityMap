@@ -1,0 +1,11 @@
+namespace KyivAccessibilityMap.Controllers
+{
+    using Microsoft.AspNetCore.Mvc;
+
+    public class AdminController : Controller
+    {
+        public IActionResult Reports() => View();
+        public IActionResult Roads() => View();
+        public IActionResult Training() => View();
+    }
+}

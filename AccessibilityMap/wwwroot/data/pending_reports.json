@@ -1,0 +1,1389 @@
+[
+  {
+    "Id": "dd83a0ef-fc7f-4b7c-b560-f2cab65c5e7f",
+    "CreatedAt": "2026-05-08T23:19:05.6755031Z",
+    "ImagePath": "/uploads/b7e748e3-837f-46bc-97af-c9d7aca0c90a.jpg",
+    "Lat": null,
+    "Lon": null,
+    "NearestRoadId": null,
+    "NearestRoadName": null,
+    "RoadType": null,
+    "MlResults": {
+      "smoothness": {
+        "class": "severe",
+        "confidence": 0.4967
+      },
+      "ramp": {
+        "class": "ramp",
+        "confidence": 0.8486
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.9335
+      },
+      "lit": {
+        "class": "lit",
+        "confidence": 0.8213
+      },
+      "tactile_paving": {
+        "class": "no",
+        "confidence": 0.9927
+      },
+      "surface_type": {
+        "class": "unpaved",
+        "confidence": 0.8244
+      },
+      "surface_quality": {
+        "class": "excellent",
+        "confidence": 0.5369
+      }
+    },
+    "Status": "approved"
+  },
+  {
+    "Id": "15f7f1c6-5bd8-4339-9d8d-a9d15f88e5d1",
+    "CreatedAt": "2026-05-09T10:58:03.4327777Z",
+    "ImagePath": "/uploads/fc171e3e-303b-482b-a09d-2007de3ae647.jpg",
+    "Lat": null,
+    "Lon": null,
+    "NearestRoadId": null,
+    "NearestRoadName": null,
+    "RoadType": null,
+    "MlResults": {
+      "smoothness": {
+        "class": "severe",
+        "confidence": 0.5751
+      },
+      "ramp": {
+        "class": "ramp",
+        "confidence": 0.8622
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.9693
+      },
+      "lit": {
+        "class": "unlit",
+        "confidence": 0.5146
+      },
+      "tactile_paving": {
+        "class": "no",
+        "confidence": 0.9973
+      },
+      "surface_type": {
+        "class": "asphalt",
+        "confidence": 0.9904
+      },
+      "surface_quality": {
+        "class": "excellent",
+        "confidence": 0.4913
+      }
+    },
+    "Status": "approved"
+  },
+  {
+    "Id": "a4409ae1-22e2-4362-9316-f25970156cf3",
+    "CreatedAt": "2026-05-09T22:36:46.6125691Z",
+    "ImagePath": "/uploads/63648d88-649f-4f23-adb9-42d531f64b3d.jpg",
+    "Lat": null,
+    "Lon": null,
+    "NearestRoadId": null,
+    "NearestRoadName": null,
+    "RoadType": null,
+    "MlResults": {
+      "smoothness": {
+        "class": "severe",
+        "confidence": 0.6235
+      },
+      "ramp": {
+        "class": "ramp",
+        "confidence": 0.6933
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.9367
+      },
+      "lit": {
+        "class": "lit",
+        "confidence": 0.8245
+      },
+      "tactile_paving": {
+        "class": "no",
+        "confidence": 0.9999
+      },
+      "surface_type": {
+        "class": "asphalt",
+        "confidence": 0.9322
+      },
+      "surface_quality": {
+        "class": "good",
+        "confidence": 0.5296
+      }
+    },
+    "Status": "approved"
+  },
+  {
+    "Id": "47604335-0573-4c55-8a5a-46204f6d689c",
+    "CreatedAt": "2026-05-09T22:37:40.0432524Z",
+    "ImagePath": "/uploads/46cff4da-cb27-4bd1-a615-3ca74a6264e7.jpg",
+    "Lat": null,
+    "Lon": null,
+    "NearestRoadId": null,
+    "NearestRoadName": null,
+    "RoadType": null,
+    "MlResults": {
+      "smoothness": {
+        "class": "severe",
+        "confidence": 0.4967
+      },
+      "ramp": {
+        "class": "ramp",
+        "confidence": 0.8486
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.9335
+      },
+      "lit": {
+        "class": "lit",
+        "confidence": 0.8213
+      },
+      "tactile_paving": {
+        "class": "no",
+        "confidence": 0.9927
+      },
+      "surface_type": {
+        "class": "unpaved",
+        "confidence": 0.8244
+      },
+      "surface_quality": {
+        "class": "excellent",
+        "confidence": 0.5369
+      }
+    },
+    "Status": "approved"
+  },
+  {
+    "Id": "769f528a-64b0-481c-9bae-1e4eb09222c9",
+    "CreatedAt": "2026-05-09T22:57:17.2007253Z",
+    "ImagePath": "/uploads/a393a678-160c-4e11-b837-8d5fbf6eff0a.jpg",
+    "Lat": null,
+    "Lon": null,
+    "NearestRoadId": null,
+    "NearestRoadName": null,
+    "RoadType": null,
+    "MlResults": {
+      "smoothness": {
+        "class": "severe",
+        "confidence": 0.4967
+      },
+      "ramp": {
+        "class": "ramp",
+        "confidence": 0.8486
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.9335
+      },
+      "lit": {
+        "class": "lit",
+        "confidence": 0.8213
+      },
+      "tactile_paving": {
+        "class": "no",
+        "confidence": 0.9927
+      },
+      "surface_type": {
+        "class": "unpaved",
+        "confidence": 0.8244
+      },
+      "surface_quality": {
+        "class": "excellent",
+        "confidence": 0.5369
+      }
+    },
+    "Status": "approved"
+  },
+  {
+    "Id": "c91f7e1c-6beb-469a-9e04-90632af1d7fd",
+    "CreatedAt": "2026-05-09T22:58:21.2128734Z",
+    "ImagePath": "/uploads/e48835de-2ca9-4dbb-9b43-033998035afd.jpg",
+    "Lat": null,
+    "Lon": null,
+    "NearestRoadId": null,
+    "NearestRoadName": null,
+    "RoadType": null,
+    "MlResults": {
+      "smoothness": {
+        "class": "severe",
+        "confidence": 0.4967
+      },
+      "ramp": {
+        "class": "ramp",
+        "confidence": 0.8486
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.9335
+      },
+      "lit": {
+        "class": "lit",
+        "confidence": 0.8213
+      },
+      "tactile_paving": {
+        "class": "no",
+        "confidence": 0.9927
+      },
+      "surface_type": {
+        "class": "unpaved",
+        "confidence": 0.8244
+      },
+      "surface_quality": {
+        "class": "excellent",
+        "confidence": 0.5369
+      }
+    },
+    "Status": "approved"
+  },
+  {
+    "Id": "32bf7592-9818-4804-9f10-bc677a358478",
+    "CreatedAt": "2026-05-09T22:59:44.0795244Z",
+    "ImagePath": "/uploads/29c18b8a-c20f-468c-af7c-51e2be097bc9.jpg",
+    "Lat": null,
+    "Lon": null,
+    "NearestRoadId": null,
+    "NearestRoadName": null,
+    "RoadType": null,
+    "MlResults": {
+      "smoothness": {
+        "class": "slight",
+        "confidence": 0.9828
+      },
+      "ramp": {
+        "class": "ramp",
+        "confidence": 0.8261
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.5991
+      },
+      "lit": {
+        "class": "unlit",
+        "confidence": 0.7655
+      },
+      "tactile_paving": {
+        "class": "no",
+        "confidence": 0.9999
+      },
+      "surface_type": {
+        "class": "asphalt",
+        "confidence": 0.4743
+      },
+      "surface_quality": {
+        "class": "bad",
+        "confidence": 0.4398
+      }
+    },
+    "Status": "approved"
+  },
+  {
+    "Id": "4231000e-f024-4c7a-88de-ea1fef1b60e3",
+    "CreatedAt": "2026-05-09T23:01:06.2980444Z",
+    "ImagePath": "/uploads/6c21d6bb-ee0d-40a4-8d53-a87f0aecac53.jpg",
+    "Lat": null,
+    "Lon": null,
+    "NearestRoadId": null,
+    "NearestRoadName": null,
+    "RoadType": null,
+    "MlResults": {
+      "smoothness": {
+        "class": "slight",
+        "confidence": 0.7423
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.9549
+      }
+    },
+    "Status": "approved"
+  },
+  {
+    "Id": "b74499af-3dfa-4462-b342-244b71c666d8",
+    "CreatedAt": "2026-05-10T11:00:14.1268508Z",
+    "ImagePath": "/uploads/e4aa3759-753e-46e9-9c5b-5ea366222970.jpg",
+    "Lat": null,
+    "Lon": null,
+    "NearestRoadId": "1414900441",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "severe",
+        "confidence": 0.4967
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.9335
+      },
+      "tactile_paving": {
+        "class": "no",
+        "confidence": 0.9927
+      },
+      "surface_type": {
+        "class": "unpaved",
+        "confidence": 0.8244
+      },
+      "surface_quality": {
+        "class": "excellent",
+        "confidence": 0.5369
+      }
+    },
+    "Status": "approved"
+  },
+  {
+    "Id": "db6e6763-e1a4-46e9-9770-ffb0fe87dcba",
+    "CreatedAt": "2026-05-11T16:06:09.6501002Z",
+    "ImagePath": "/uploads/dd35ebd9-1a3c-4434-af90-525417ca74b6.jpg",
+    "Lat": null,
+    "Lon": null,
+    "NearestRoadId": "1068835260",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "severe",
+        "confidence": 0.4967
+      },
+      "ramp": {
+        "class": "ramp",
+        "confidence": 0.8486
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.9335
+      },
+      "lit": {
+        "class": "lit",
+        "confidence": 0.8213
+      },
+      "tactile_paving": {
+        "class": "no",
+        "confidence": 0.9927
+      },
+      "surface_type": {
+        "class": "unpaved",
+        "confidence": 0.8244
+      },
+      "surface_quality": {
+        "class": "excellent",
+        "confidence": 0.5369
+      }
+    },
+    "Status": "approved"
+  },
+  {
+    "Id": "d411a030-5895-44e2-8d38-509b1ae20203",
+    "CreatedAt": "2026-05-11T16:08:31.7388333Z",
+    "ImagePath": "/uploads/3b72ea25-0007-4c77-bef8-a5ec1f9d7ab4.jpg",
+    "Lat": null,
+    "Lon": null,
+    "NearestRoadId": "1068835260",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "severe",
+        "confidence": 0.4967
+      },
+      "ramp": {
+        "class": "ramp",
+        "confidence": 0.8486
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.9335
+      },
+      "lit": {
+        "class": "lit",
+        "confidence": 0.8213
+      },
+      "tactile_paving": {
+        "class": "no",
+        "confidence": 0.9927
+      },
+      "surface_type": {
+        "class": "unpaved",
+        "confidence": 0.8244
+      },
+      "surface_quality": {
+        "class": "excellent",
+        "confidence": 0.5369
+      }
+    },
+    "Status": "rejected"
+  },
+  {
+    "Id": "d9dc3f15-b8de-4142-b66e-c5b1c5994d66",
+    "CreatedAt": "2026-05-11T16:09:13.7904172Z",
+    "ImagePath": "/uploads/e8e0ecdf-1009-4429-b457-badb23a0c91c.jpg",
+    "Lat": null,
+    "Lon": null,
+    "NearestRoadId": "1068835260",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "severe",
+        "confidence": 0.4967
+      },
+      "ramp": {
+        "class": "ramp",
+        "confidence": 0.8486
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.9335
+      },
+      "lit": {
+        "class": "lit",
+        "confidence": 0.8213
+      },
+      "tactile_paving": {
+        "class": "no",
+        "confidence": 0.9927
+      },
+      "surface_type": {
+        "class": "unpaved",
+        "confidence": 0.8244
+      },
+      "surface_quality": {
+        "class": "excellent",
+        "confidence": 0.5369
+      }
+    },
+    "Status": "approved"
+  },
+  {
+    "Id": "b665b38a-3fdd-4663-a81f-ae715e309b4c",
+    "CreatedAt": "2026-05-11T16:12:51.6467143Z",
+    "ImagePath": "/uploads/735b8e07-7b8f-48ca-9c0d-c80e39b39307.jpg",
+    "Lat": null,
+    "Lon": null,
+    "NearestRoadId": "1068835260",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "severe",
+        "confidence": 0.4967
+      },
+      "ramp": {
+        "class": "ramp",
+        "confidence": 0.8486
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.9335
+      },
+      "lit": {
+        "class": "lit",
+        "confidence": 0.8213
+      },
+      "tactile_paving": {
+        "class": "no",
+        "confidence": 0.9927
+      },
+      "surface_type": {
+        "class": "unpaved",
+        "confidence": 0.8244
+      },
+      "surface_quality": {
+        "class": "excellent",
+        "confidence": 0.5369
+      }
+    },
+    "Status": "rejected"
+  },
+  {
+    "Id": "2b652612-de34-40bd-b874-d726376cf985",
+    "CreatedAt": "2026-05-11T16:24:23.8920158Z",
+    "ImagePath": "/uploads/267d8656-1db6-4c6a-941b-6eb9d4a386f6.jpg",
+    "Lat": null,
+    "Lon": null,
+    "NearestRoadId": "320783434",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "severe",
+        "confidence": 0.6235
+      },
+      "ramp": {
+        "class": "ramp",
+        "confidence": 0.6933
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.9367
+      },
+      "lit": {
+        "class": "lit",
+        "confidence": 0.8245
+      },
+      "tactile_paving": {
+        "class": "no",
+        "confidence": 0.9999
+      },
+      "surface_type": {
+        "class": "asphalt",
+        "confidence": 0.9322
+      },
+      "surface_quality": {
+        "class": "good",
+        "confidence": 0.5296
+      }
+    },
+    "Status": "rejected"
+  },
+  {
+    "Id": "82fbe0d3-beec-4887-ac4b-4344608bcd56",
+    "CreatedAt": "2026-05-13T17:13:01.6050981Z",
+    "ImagePath": "/uploads/1da80dde-039c-4d1b-8d89-b1b3839f2252.jpg",
+    "Lat": null,
+    "Lon": null,
+    "NearestRoadId": "1428100301",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "severe",
+        "confidence": 0.6235
+      },
+      "ramp": {
+        "class": "ramp",
+        "confidence": 0.6933
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.9367
+      },
+      "tactile_paving": {
+        "class": "no",
+        "confidence": 0.9999
+      },
+      "surface_type": {
+        "class": "asphalt",
+        "confidence": 0.9322
+      },
+      "surface_quality": {
+        "class": "good",
+        "confidence": 0.5296
+      }
+    },
+    "Status": "approved"
+  },
+  {
+    "Id": "46c62504-d018-4a8c-957b-0a4579104909",
+    "CreatedAt": "2026-05-13T23:54:22.2316841Z",
+    "ImagePath": "/uploads/00a93727-9abe-4f35-87df-5cb1747adec6.jpg",
+    "Lat": null,
+    "Lon": null,
+    "NearestRoadId": "1068835260",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "severe",
+        "confidence": 0.983
+      },
+      "ramp": {
+        "class": "ramp",
+        "confidence": 0.7865
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.7757
+      },
+      "lit": {
+        "class": "unlit",
+        "confidence": 0.5878
+      },
+      "tactile_paving": {
+        "class": "no",
+        "confidence": 0.9999
+      },
+      "surface_type": {
+        "class": "asphalt",
+        "confidence": 0.7109
+      },
+      "surface_quality": {
+        "class": "good",
+        "confidence": 0.6875
+      }
+    },
+    "Status": "rejected"
+  },
+  {
+    "Id": "c38957f5-7e5e-4b89-a4d5-bad8a1dcf52e",
+    "CreatedAt": "2026-05-13T23:56:51.679158Z",
+    "ImagePath": "/uploads/ee730929-714d-4414-9c56-bbe5910ba4e0.jpg",
+    "Lat": null,
+    "Lon": null,
+    "NearestRoadId": "1068835260",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "slight",
+        "confidence": 0.9828
+      },
+      "ramp": {
+        "class": "ramp",
+        "confidence": 0.8261
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.5991
+      },
+      "lit": {
+        "class": "unlit",
+        "confidence": 0.7655
+      },
+      "tactile_paving": {
+        "class": "no",
+        "confidence": 0.9999
+      },
+      "surface_type": {
+        "class": "asphalt",
+        "confidence": 0.4743
+      },
+      "surface_quality": {
+        "class": "bad",
+        "confidence": 0.4398
+      }
+    },
+    "Status": "rejected"
+  },
+  {
+    "Id": "0db4015b-23e7-4b27-ba12-85536e4e1b25",
+    "CreatedAt": "2026-05-14T00:05:58.89628Z",
+    "ImagePath": "/uploads/7caeb956-a7f4-49c1-a389-5c0c4db5886a.jpg",
+    "Lat": null,
+    "Lon": null,
+    "NearestRoadId": "1375979767",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "slight",
+        "confidence": 0.9376
+      },
+      "ramp": {
+        "class": "no_ramp",
+        "confidence": 0.5625
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.7193
+      },
+      "lit": {
+        "class": "unlit",
+        "confidence": 0.5333
+      },
+      "tactile_paving": {
+        "class": "no",
+        "confidence": 0.9994
+      },
+      "surface_type": {
+        "class": "paving_stones",
+        "confidence": 0.8146
+      },
+      "surface_quality": {
+        "class": "very_bad",
+        "confidence": 0.6995
+      }
+    },
+    "Status": "rejected"
+  },
+  {
+    "Id": "1c887336-dd06-42b9-8737-438de313b2c3",
+    "CreatedAt": "2026-05-14T00:10:52.2464902Z",
+    "ImagePath": "/uploads/72596282-3cdd-4593-94b1-9e7adc532a82.jpg",
+    "Lat": null,
+    "Lon": null,
+    "NearestRoadId": "1068835260",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "smooth",
+        "confidence": 0.9759
+      },
+      "ramp": {
+        "class": "ramp",
+        "confidence": 0.8882
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.9272
+      },
+      "lit": {
+        "class": "lit",
+        "confidence": 0.6951
+      },
+      "tactile_paving": {
+        "class": "no",
+        "confidence": 0.9996
+      },
+      "surface_type": {
+        "class": "asphalt",
+        "confidence": 0.9683
+      },
+      "surface_quality": {
+        "class": "good",
+        "confidence": 0.5074
+      }
+    },
+    "Status": "approved"
+  },
+  {
+    "Id": "bd591190-bf42-4732-884d-8fae1de23e5f",
+    "CreatedAt": "2026-05-14T22:24:43.5601545Z",
+    "ImagePath": "/uploads/97557a88-e7b5-4176-8a2b-4a91b492fec2.jpg",
+    "Lat": null,
+    "Lon": null,
+    "NearestRoadId": "1239176329",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "slight",
+        "confidence": 0.9376
+      },
+      "ramp": {
+        "class": "no_ramp",
+        "confidence": 0.5625
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.7193
+      },
+      "lit": {
+        "class": "unlit",
+        "confidence": 0.5333
+      },
+      "tactile_paving": {
+        "class": "no",
+        "confidence": 0.9994
+      },
+      "surface_type": {
+        "class": "paving_stones",
+        "confidence": 0.8146
+      },
+      "surface_quality": {
+        "class": "very_bad",
+        "confidence": 0.6995
+      }
+    },
+    "Status": "pending"
+  },
+  {
+    "Id": "b6480fb7-890f-42a5-9f77-b5b6da8c8670",
+    "CreatedAt": "2026-05-14T22:25:02.8710977Z",
+    "ImagePath": "/uploads/650d834b-ff98-4736-bdce-9f7ba5f90910.jpg",
+    "Lat": null,
+    "Lon": null,
+    "NearestRoadId": "1239176329",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "slight",
+        "confidence": 0.9376
+      },
+      "ramp": {
+        "class": "no_ramp",
+        "confidence": 0.5625
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.7193
+      },
+      "lit": {
+        "class": "unlit",
+        "confidence": 0.5333
+      },
+      "tactile_paving": {
+        "class": "no",
+        "confidence": 0.9994
+      },
+      "surface_type": {
+        "class": "paving_stones",
+        "confidence": 0.8146
+      },
+      "surface_quality": {
+        "class": "very_bad",
+        "confidence": 0.6995
+      }
+    },
+    "Status": "pending"
+  },
+  {
+    "Id": "cfd4bcd0-be98-410b-92f3-07b5cf4b2345",
+    "CreatedAt": "2026-05-14T22:25:33.2389901Z",
+    "ImagePath": "/uploads/f088568d-0585-44ea-a196-f08c41daf58d.jpg",
+    "Lat": null,
+    "Lon": null,
+    "NearestRoadId": "1239176329",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "slight",
+        "confidence": 0.9376
+      },
+      "ramp": {
+        "class": "no_ramp",
+        "confidence": 0.5625
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.7193
+      },
+      "lit": {
+        "class": "unlit",
+        "confidence": 0.5333
+      },
+      "tactile_paving": {
+        "class": "no",
+        "confidence": 0.9994
+      },
+      "surface_type": {
+        "class": "paving_stones",
+        "confidence": 0.8146
+      },
+      "surface_quality": {
+        "class": "very_bad",
+        "confidence": 0.6995
+      }
+    },
+    "Status": "pending"
+  },
+  {
+    "Id": "7cb64bad-e618-4a2f-8ce4-422a87266a88",
+    "CreatedAt": "2026-05-14T22:26:02.9739012Z",
+    "ImagePath": "/uploads/29782427-1009-44a7-87c7-6adf30aec0b4.jpg",
+    "Lat": null,
+    "Lon": null,
+    "NearestRoadId": "1239176329",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "slight",
+        "confidence": 0.9376
+      },
+      "ramp": {
+        "class": "no_ramp",
+        "confidence": 0.5625
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.7193
+      },
+      "lit": {
+        "class": "unlit",
+        "confidence": 0.5333
+      },
+      "tactile_paving": {
+        "class": "no",
+        "confidence": 0.9994
+      },
+      "surface_type": {
+        "class": "paving_stones",
+        "confidence": 0.8146
+      },
+      "surface_quality": {
+        "class": "very_bad",
+        "confidence": 0.6995
+      }
+    },
+    "Status": "pending"
+  },
+  {
+    "Id": "65242c76-b7be-4133-b097-6dd41a2b1c70",
+    "CreatedAt": "2026-05-14T22:26:39.1445695Z",
+    "ImagePath": "/uploads/57be38c7-7c05-4b60-b0df-898de17870d0.jpg",
+    "Lat": null,
+    "Lon": null,
+    "NearestRoadId": "1239176329",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "slight",
+        "confidence": 0.9376
+      },
+      "ramp": {
+        "class": "no_ramp",
+        "confidence": 0.5625
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.7193
+      },
+      "lit": {
+        "class": "unlit",
+        "confidence": 0.5333
+      },
+      "tactile_paving": {
+        "class": "no",
+        "confidence": 0.9994
+      },
+      "surface_type": {
+        "class": "paving_stones",
+        "confidence": 0.8146
+      },
+      "surface_quality": {
+        "class": "very_bad",
+        "confidence": 0.6995
+      }
+    },
+    "Status": "pending"
+  },
+  {
+    "Id": "95abf3e6-a429-46ba-9d83-259ffb513522",
+    "CreatedAt": "2026-05-14T22:39:14.8226226Z",
+    "ImagePath": "/uploads/9b62cbe7-ab02-461f-b381-0b419fa0e4a6.jpg",
+    "Lat": null,
+    "Lon": null,
+    "NearestRoadId": "588442908",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "slight",
+        "confidence": 0.9934
+      },
+      "ramp": {
+        "class": "no_ramp",
+        "confidence": 0.5263
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.9476
+      },
+      "lit": {
+        "class": "unlit",
+        "confidence": 0.5663
+      },
+      "tactile_paving": {
+        "class": "no",
+        "confidence": 0.9997
+      },
+      "surface_type": {
+        "class": "paving_stones",
+        "confidence": 0.6108
+      },
+      "surface_quality": {
+        "class": "very_bad",
+        "confidence": 0.4691
+      }
+    },
+    "Status": "pending"
+  },
+  {
+    "Id": "25701c14-6612-4531-867b-c7786f816b60",
+    "CreatedAt": "2026-05-14T22:48:10.0294908Z",
+    "ImagePath": "/uploads/7c4664c7-e4db-4045-a281-bd1ae554463c.jpg",
+    "Lat": null,
+    "Lon": null,
+    "NearestRoadId": "449126781",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "slight",
+        "confidence": 0.9934
+      },
+      "ramp": {
+        "class": "no_ramp",
+        "confidence": 0.5263
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.9476
+      },
+      "lit": {
+        "class": "unlit",
+        "confidence": 0.5663
+      },
+      "tactile_paving": {
+        "class": "no",
+        "confidence": 0.9997
+      },
+      "surface_type": {
+        "class": "paving_stones",
+        "confidence": 0.6108
+      },
+      "surface_quality": {
+        "class": "very_bad",
+        "confidence": 0.4691
+      }
+    },
+    "Status": "pending"
+  },
+  {
+    "Id": "60c6ba62-6ced-4ffc-bd96-e4083afc295a",
+    "CreatedAt": "2026-05-14T22:52:24.4335427Z",
+    "ImagePath": "/uploads/c9675dc1-95d9-4896-8cd6-a925e2d1ceb9.jpg",
+    "Lat": null,
+    "Lon": null,
+    "NearestRoadId": "501622933",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "severe",
+        "confidence": 0.6235
+      },
+      "ramp": {
+        "class": "ramp",
+        "confidence": 0.6933
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.9367
+      },
+      "lit": {
+        "class": "lit",
+        "confidence": 0.8245
+      },
+      "tactile_paving": {
+        "class": "no",
+        "confidence": 0.9999
+      },
+      "surface_type": {
+        "class": "asphalt",
+        "confidence": 0.9322
+      },
+      "surface_quality": {
+        "class": "good",
+        "confidence": 0.5296
+      }
+    },
+    "Status": "pending"
+  },
+  {
+    "Id": "355f8b4a-134a-4e9f-a36e-9d73fdadfe8e",
+    "CreatedAt": "2026-05-14T22:55:14.2118589Z",
+    "ImagePath": "/uploads/d3dcb671-cb61-4e26-b2d0-a51ecb8c6aaf.jpg",
+    "Lat": null,
+    "Lon": null,
+    "NearestRoadId": "310281942",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "severe",
+        "confidence": 0.4967
+      },
+      "ramp": {
+        "class": "ramp",
+        "confidence": 0.8486
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.9335
+      },
+      "lit": {
+        "class": "lit",
+        "confidence": 0.8213
+      },
+      "tactile_paving": {
+        "class": "no",
+        "confidence": 0.9927
+      },
+      "surface_type": {
+        "class": "unpaved",
+        "confidence": 0.8244
+      },
+      "surface_quality": {
+        "class": "excellent",
+        "confidence": 0.5369
+      }
+    },
+    "Status": "pending"
+  },
+  {
+    "Id": "098a4f3e-06de-401f-a5e9-62d3168c6fc7",
+    "CreatedAt": "2026-05-14T22:59:53.0339203Z",
+    "ImagePath": "/uploads/1791d080-4725-475d-8f91-0a24b365a203.jpg",
+    "Lat": null,
+    "Lon": null,
+    "NearestRoadId": "310281942",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "severe",
+        "confidence": 0.4967
+      },
+      "ramp": {
+        "class": "ramp",
+        "confidence": 0.8486
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.9335
+      },
+      "lit": {
+        "class": "lit",
+        "confidence": 0.8213
+      },
+      "tactile_paving": {
+        "class": "no",
+        "confidence": 0.9927
+      },
+      "surface_type": {
+        "class": "unpaved",
+        "confidence": 0.8244
+      },
+      "surface_quality": {
+        "class": "excellent",
+        "confidence": 0.5369
+      }
+    },
+    "Status": "pending"
+  },
+  {
+    "Id": "e2702bdd-d6b5-46a0-b866-61342905823f",
+    "CreatedAt": "2026-05-14T23:02:47.7784783Z",
+    "ImagePath": "/uploads/686858a5-17bc-4365-bca0-c58059ded2b3.jpg",
+    "Lat": null,
+    "Lon": null,
+    "NearestRoadId": "1391460916",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "slight",
+        "confidence": 0.9391
+      },
+      "ramp": {
+        "class": "ramp",
+        "confidence": 0.8612
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.9178
+      },
+      "lit": {
+        "class": "unlit",
+        "confidence": 0.6597
+      },
+      "tactile_paving": {
+        "class": "no",
+        "confidence": 0.995
+      },
+      "surface_type": {
+        "class": "asphalt",
+        "confidence": 0.6319
+      },
+      "surface_quality": {
+        "class": "good",
+        "confidence": 0.4496
+      }
+    },
+    "Status": "pending"
+  },
+  {
+    "Id": "a629ae3c-da06-4820-bda6-f6a7c4519b57",
+    "CreatedAt": "2026-05-14T23:03:19.2137789Z",
+    "ImagePath": "/uploads/8600b2af-042f-4861-aa69-57cbd0135e1b.jpg",
+    "Lat": null,
+    "Lon": null,
+    "NearestRoadId": "1391460916",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "severe",
+        "confidence": 0.4967
+      },
+      "ramp": {
+        "class": "ramp",
+        "confidence": 0.8486
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.9335
+      },
+      "lit": {
+        "class": "lit",
+        "confidence": 0.8213
+      },
+      "tactile_paving": {
+        "class": "no",
+        "confidence": 0.9927
+      },
+      "surface_type": {
+        "class": "unpaved",
+        "confidence": 0.8244
+      },
+      "surface_quality": {
+        "class": "excellent",
+        "confidence": 0.5369
+      }
+    },
+    "Status": "pending"
+  },
+  {
+    "Id": "46086c1f-0d37-4999-bf4c-d6090482c624",
+    "CreatedAt": "2026-05-14T23:03:40.0700492Z",
+    "ImagePath": "/uploads/5d795a96-bf71-42aa-b80b-967c0f49a14f.jpg",
+    "Lat": null,
+    "Lon": null,
+    "NearestRoadId": null,
+    "NearestRoadName": null,
+    "RoadType": null,
+    "MlResults": {
+      "smoothness": {
+        "class": "slight",
+        "confidence": 0.9376
+      },
+      "ramp": {
+        "class": "no_ramp",
+        "confidence": 0.5625
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.7193
+      },
+      "lit": {
+        "class": "unlit",
+        "confidence": 0.5333
+      },
+      "tactile_paving": {
+        "class": "no",
+        "confidence": 0.9994
+      },
+      "surface_type": {
+        "class": "paving_stones",
+        "confidence": 0.8146
+      },
+      "surface_quality": {
+        "class": "very_bad",
+        "confidence": 0.6995
+      }
+    },
+    "Status": "pending"
+  },
+  {
+    "Id": "6a8df493-1bcb-453e-9d3a-cbc0304319cf",
+    "CreatedAt": "2026-05-14T23:08:11.5311669Z",
+    "ImagePath": "/uploads/071a732e-cb12-453c-b283-2093862c0674.jpg",
+    "Lat": null,
+    "Lon": null,
+    "NearestRoadId": "280199072",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "slight",
+        "confidence": 0.9376
+      },
+      "ramp": {
+        "class": "no_ramp",
+        "confidence": 0.5625
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.7193
+      },
+      "lit": {
+        "class": "unlit",
+        "confidence": 0.5333
+      },
+      "tactile_paving": {
+        "class": "no",
+        "confidence": 0.9994
+      },
+      "surface_type": {
+        "class": "paving_stones",
+        "confidence": 0.8146
+      },
+      "surface_quality": {
+        "class": "very_bad",
+        "confidence": 0.6995
+      }
+    },
+    "Status": "approved"
+  },
+  {
+    "Id": "a848675a-b36d-4cad-a572-3d48c10c2830",
+    "CreatedAt": "2026-05-17T19:25:22.927116Z",
+    "ImagePath": "/uploads/cdf26bad-4500-4741-8617-5eea4d009d37.jpg",
+    "Lat": null,
+    "Lon": null,
+    "NearestRoadId": "48529",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "slight",
+        "confidence": 0.9391
+      },
+      "ramp": {
+        "class": "ramp",
+        "confidence": 0.8612
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.9178
+      },
+      "lit": {
+        "class": "unlit",
+        "confidence": 0.6597
+      },
+      "tactile_paving": {
+        "class": "no",
+        "confidence": 0.995
+      },
+      "surface_type": {
+        "class": "asphalt",
+        "confidence": 0.6319
+      },
+      "surface_quality": {
+        "class": "good",
+        "confidence": 0.4496
+      }
+    },
+    "Status": "pending"
+  },
+  {
+    "Id": "fbced589-4839-4f56-94c3-1bf1aefcd036",
+    "CreatedAt": "2026-05-21T15:10:31.8057062Z",
+    "ImagePath": "/uploads/bee9b31b-e078-4e02-8761-baafbb1696d2.jpg",
+    "Lat": null,
+    "Lon": null,
+    "NearestRoadId": "138591",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "severe",
+        "confidence": 0.4967
+      },
+      "tactile_paving": {
+        "class": "no",
+        "confidence": 0.9927
+      },
+      "surface_quality": {
+        "class": "excellent",
+        "confidence": 0.5369
+      }
+    },
+    "Status": "pending"
+  }
+]

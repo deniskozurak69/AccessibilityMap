@@ -1,0 +1,144 @@
+{
+  "accessibility_criteria": [
+    {
+      "type": "Люди з порушеннями зору (незрячі)",
+      "criteria": {
+        "wheelchair": "no",
+        "lit": "no",
+        "tactile_paving": "yes",
+        "surface": [ "asphalt", "concrete", "concrete:plates", "paving_stones" ],
+        "smoothness": [ "excellent", "good" ],
+        "width": {
+          "value": 1.8,
+          "comparator": "more"
+        }
+      }
+    },
+    {
+      "type": "Люди з проблемами зору (слабозорі)",
+      "criteria": {
+        "wheelchair": "no",
+        "lit": "yes",
+        "tactile_paving": "yes",
+        "surface": [ "asphalt", "concrete", "concrete:plates", "paved" ],
+        "smoothness": [ "good", "intermediate", "excellent" ],
+        "width": {
+          "value": 1.8,
+          "comparator": "more"
+        }
+      }
+    },
+    {
+      "type": "Люди з порушеннями слуху",
+      "criteria": {
+        "wheelchair": "no",
+        "lit": "yes",
+        "tactile_paving": "no",
+        "surface": [ "asphalt", "compacted", "concrete", "paved" ],
+        "smoothness": [ "good", "intermediate", "excellent" ],
+        "width": {
+          "value": 1.2,
+          "comparator": "more"
+        }
+      }
+    },
+    {
+      "type": "Люди з порушенням рухового апарату",
+      "criteria": {
+        "wheelchair": "yes",
+        "lit": "yes",
+        "tactile_paving": "no",
+        "surface": [ "asphalt", "concrete", "concrete:plates", "compacted" ],
+        "smoothness": [ "excellent", "good" ],
+        "width": {
+          "value": 1.8,
+          "comparator": "more"
+        }
+      }
+    },
+    {
+      "type": "Люди з пошкодженими кінцівками",
+      "criteria": {
+        "wheelchair": "yes",
+        "lit": "yes",
+        "tactile_paving": "no",
+        "surface": [ "asphalt", "concrete", "paving_stones" ],
+        "smoothness": [ "good", "intermediate", "excellent" ],
+        "width": {
+          "value": 1.8,
+          "comparator": "more"
+        }
+      }
+    },
+    {
+      "type": "Люди похилого віку",
+      "criteria": {
+        "wheelchair": "no",
+        "lit": "yes",
+        "tactile_paving": "no",
+        "surface": [ "asphalt", "concrete", "sett" ],
+        "smoothness": [ "excellent", "good" ],
+        "width": {
+          "value": 1.8,
+          "comparator": "more"
+        }
+      }
+    },
+    {
+      "type": "Вагітні жінки",
+      "criteria": {
+        "wheelchair": "no",
+        "lit": "yes",
+        "tactile_paving": "no",
+        "surface": [ "asphalt", "compacted", "concrete" ],
+        "smoothness": [ "good", "intermediate", "excellent" ],
+        "width": {
+          "value": 1.8,
+          "comparator": "more"
+        }
+      }
+    },
+    {
+      "type": "Батьки з дитячими колясками",
+      "criteria": {
+        "wheelchair": "yes",
+        "lit": "yes",
+        "tactile_paving": "no",
+        "surface": [ "asphalt", "concrete", "concrete:plates" ],
+        "smoothness": [ "excellent", "good" ],
+        "width": {
+          "value": 1.8,
+          "comparator": "more"
+        }
+      }
+    },
+    {
+      "type": "Велосипедисти",
+      "criteria": {
+        "wheelchair": "no",
+        "lit": "yes",
+        "tactile_paving": "no",
+        "surface": [ "asphalt", "concrete", "paved" ],
+        "smoothness": [ "excellent", "good" ],
+        "width": {
+          "value": 2.0,
+          "comparator": "more"
+        }
+      }
+    },
+    {
+      "type": "Люди з валізою",
+      "criteria": {
+        "wheelchair": "no",
+        "lit": "yes",
+        "tactile_paving": "no",
+        "surface": [ "asphalt", "concrete", "compacted" ],
+        "smoothness": [ "good", "intermediate", "excellent" ],
+        "width": {
+          "value": 1.2,
+          "comparator": "more"
+        }
+      }
+    }
+  ]
+}

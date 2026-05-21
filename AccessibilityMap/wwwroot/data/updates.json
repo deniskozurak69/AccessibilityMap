@@ -1,0 +1,24 @@
+{
+  "1414900441": {},
+  "1068835260": {
+    "surface": "asphalt",
+    "smoothness": "good",
+    "lit": "yes",
+    "tactile_paving": "no",
+    "ramp": "yes",
+    "roughness": "smooth"
+  },
+  "1428100301": {
+    "surface": "asphalt",
+    "tactile_paving": "no"
+  },
+  "280199072": {
+    "surface": "unpaved",
+    "smoothness": "very_bad",
+    "lit": "no",
+    "tactile_paving": "no",
+    "width": 2,
+    "ramp": "no",
+    "roughness": "severe"
+  }
+}

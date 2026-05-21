@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "kyiv-accessibility",
+  "private_key_id": "a7403ce2b3f333d3d6c01867594a731f701057f4",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDJcYI6GwEUQtEA\n9qUdUZ+frrQAPwr4PXzHZfAc9xf7vRxx5RDIqCM5d7SM25+eI6uUEl00faK5QHy+\ngqxBvCpUIxFk8Qufe9oRBPoBFSfj0iTJa/QSyDlIc4nXptxVjA4ysKVCPeAz5e1y\n2f5XXL0JwGI3lUhi/6fU4h36CxMR84t7OMSy8uL/i1cVUJporhXmqI+4kcXg6+U7\nTHpvlguIFuLAPHqrSs8LjmQd8xMPCemB1N5qi8HQHGKxStlxhxdH7c3RpZeZ76Gy\n7yapMcZiw71ShTTQB0wLibcOn1EgkXQOza12qKjcLxXvhjbNoeJ0m3JdDSPk8yhL\nDwepB5StAgMBAAECggEABzRwG/PrTfY103r+3NWWh/ePqJKYqdhJJjiXJfIQgYh6\nA/jVaNfaqquFYaRZSSatdFZTzxTPRSDxVT8HOjKosOmwLZQRflrHqeQrrO48xwE1\nH58k06clpVm8jGIDb2va9iUrQ/tCkZifrYPufOFsQXUIDkTgmena7tpHiDHtNK8Z\nB1m0/Iy/nR6szxCA/9OcwvHnflnw0AlWRplg+paiWO7IYensHeVVOirZwwZmvI76\n/zX6yAEUC/4xgzduGrMQX5sUsTYUI89zjz9nQp1XvAB7hxFs0AzeyUC/s1fXQrmn\nIoqcE/mAszYX9+gNJDNB5tx1qAiLbClwCNaw0hCJYQKBgQDkuLAr0G3edgH11fec\nS6RJePQ5ubWVHIj4ibkrq3XikoCzrjiHb3lQxXzxaHk+f98iy84pu/hO+ebmyiMk\nfITFh8IhoXsOajvcQLtzzqT1QfzZ1D025fIkAa9ViR1Dy/UUVLoIGLGCaFYrTLAr\nFwVhDlcmj5RGDMMOqWdYfd9ClwKBgQDhd/f1sIcvJT7nLGtVcwhsehUNcuiDjfsi\n3wvtWZLzta6BH75Egm5r+uty8N79TQOB4nqxaEHAC0Lcu127ttjrO9yRgf5D9MVQ\ngnqiCFrCIMDS8RJFZfeTtgbWJzJCWOEx1dhiPsaVxhvYgaHx6T5Z2cbcWXa94GTw\nUWl4Cq5/WwKBgQDS+2LXJ88RlL2+Lf/Y1xXXCJIQ5bQQtl/LFBARrnpx5D6AgMd4\nd2XrEiFs9rhQ5NfKW0Hz0Yb+IxvR7Mh6EbrQE6kKKNFAvNI3HCdObmJQMuyxa0yE\nZZz1hfBc8LxkG7IZbQamDVFBQEmsa3NebD/0Baxyz6Mw8vjDf5TrVkEqRQKBgQCX\nnXrKZkihdWRVQ9NxhIc3muipQIoGXOVxz5dPphphc9zCy7vAig0C45qMklkA8FbZ\ncpiaz8bXAzuU/xHK9uvrUzfBSS7YN7Kvru4UI5YUUL4Zmy50KFtRouf5/iWX4/ia\n8HgvqJMViECVWKaz6+qXtRA6gJaOnGSEDdrkdBpfXQKBgAjgu11PTySp9qws0z1q\nK+AR4XSG4I+fu8IKsz3IrZR73pyhNCBW/EDIEyDmAmOy4O184wRVdgSrSU9QkSUL\nJtxhMrkLeV5ICJWUO9WR0zb9OzLZnOjn0fG6qwl3l2j/dRBK5vcvTFgkjfPM/jkn\nHotzP+tpqIH42ZhBt0d4JQFy\n-----END PRIVATE KEY-----\n",
+  "client_email": "accessibility-trainer@kyiv-accessibility.iam.gserviceaccount.com",
+  "client_id": "105608553688917770930",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/accessibility-trainer%40kyiv-accessibility.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

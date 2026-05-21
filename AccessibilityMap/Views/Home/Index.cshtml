@@ -1,0 +1,385 @@
+﻿@{
+    ViewData["Title"] = "Карта доступності Києва";
+}
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+    <link rel="stylesheet" href="~/css/accessibility-map.css" asp-append-version="true" />
+</head>
+<div id="reportModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+     background:rgba(0,0,0,0.5); z-index:2000; align-items:center; justify-content:center;">
+    <div style="background:white; border-radius:0.5rem; padding:1.5rem; width:32rem;
+                max-height:90vh; overflow-y:auto;
+                box-shadow:0 20px 40px rgba(0,0,0,0.3);">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+            <h3 style="font-size:1.125rem; font-weight:600;">📷 Повідомити про проблему</h3>
+            <button onclick="closeReportModal()" style="background:none; border:none; font-size:1.5rem;
+                    cursor:pointer; color:#6b7280;">
+                ×
+            </button>
+        </div>
+
+        <p style="font-size:0.875rem; color:#6b7280; margin-bottom:1rem;">
+            Завантажте фото дороги та оберіть параметри для аналізу.
+        </p>
+
+        <!-- Фото -->
+        <div id="reportPhotoWrapper" style="margin-bottom:1rem;">
+            <label style="display:block; font-size:0.875rem; font-weight:500; margin-bottom:0.5rem;">
+                Фото дороги *
+            </label>
+            <input type="file" id="reportPhoto" accept="image/*"
+                   style="width:100%; padding:0.5rem; border:1px solid #d1d5db;
+                          border-radius:0.375rem; font-size:0.875rem;">
+        </div>
+
+        <div id="reportPreview" style="display:none; margin-bottom:1rem;">
+            <img id="reportPreviewImg" style="width:100%; height:12rem; object-fit:cover;
+                 border-radius:0.375rem; border:1px solid #e5e7eb;">
+        </div>
+
+        <!-- Вибір параметрів -->
+        <div style="margin-bottom:1rem;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+                <label style="font-size:0.875rem; font-weight:500;">Параметри для аналізу</label>
+                <div style="display:flex; gap:0.5rem;">
+                    <button onclick="selectAllModels(true)"
+                            style="font-size:0.75rem; color:#2563eb; background:none; border:none; cursor:pointer;">
+                        Всі
+                    </button>
+                    <span style="color:#d1d5db;">|</span>
+                    <button onclick="selectAllModels(false)"
+                            style="font-size:0.75rem; color:#6b7280; background:none; border:none; cursor:pointer;">
+                        Жодного
+                    </button>
+                </div>
+            </div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.4rem;">
+                <label style="display:flex; align-items:center; gap:0.5rem; font-size:0.8rem;
+                              padding:0.4rem 0.6rem; border:1px solid #e5e7eb; border-radius:0.375rem; cursor:pointer;">
+                    <input type="checkbox" class="model-checkbox" value="smoothness" checked>
+                    🛣️ Нерівність
+                </label>
+                <label style="display:flex; align-items:center; gap:0.5rem; font-size:0.8rem;
+                              padding:0.4rem 0.6rem; border:1px solid #e5e7eb; border-radius:0.375rem; cursor:pointer;">
+                    <input type="checkbox" class="model-checkbox" value="ramp" checked>
+                    ♿ Пандус
+                </label>
+                <label style="display:flex; align-items:center; gap:0.5rem; font-size:0.8rem;
+                              padding:0.4rem 0.6rem; border:1px solid #e5e7eb; border-radius:0.375rem; cursor:pointer;">
+                    <input type="checkbox" class="model-checkbox" value="width" checked>
+                    ↔️ Ширина
+                </label>
+                <label style="display:flex; align-items:center; gap:0.5rem; font-size:0.8rem;
+                              padding:0.4rem 0.6rem; border:1px solid #e5e7eb; border-radius:0.375rem; cursor:pointer;">
+                    <input type="checkbox" class="model-checkbox" value="lit" checked>
+                    💡 Освітлення
+                </label>
+                <label style="display:flex; align-items:center; gap:0.5rem; font-size:0.8rem;
+                              padding:0.4rem 0.6rem; border:1px solid #e5e7eb; border-radius:0.375rem; cursor:pointer;">
+                    <input type="checkbox" class="model-checkbox" value="tactile_paving" checked>
+                    👣 Тактильна плитка
+                </label>
+                <label style="display:flex; align-items:center; gap:0.5rem; font-size:0.8rem;
+                              padding:0.4rem 0.6rem; border:1px solid #e5e7eb; border-radius:0.375rem; cursor:pointer;">
+                    <input type="checkbox" class="model-checkbox" value="surface_type" checked>
+                    🪨 Тип покриття
+                </label>
+                <label style="display:flex; align-items:center; gap:0.5rem; font-size:0.8rem;
+                              padding:0.4rem 0.6rem; border:1px solid #e5e7eb; border-radius:0.375rem; cursor:pointer;
+                              grid-column: 1 / -1;">
+                    <input type="checkbox" class="model-checkbox" value="surface_quality" checked>
+                    ⭐ Якість покриття
+                </label>
+            </div>
+        </div>
+
+        <div id="reportStatus" style="display:none; padding:0.75rem; border-radius:0.375rem;
+             font-size:0.875rem; margin-bottom:1rem;"></div>
+
+        <div style="display:flex; gap:0.5rem; justify-content:flex-end;">
+            <button onclick="closeReportModal()" id="reportCancelBtn" class="filter-btn">Скасувати</button>
+            <button onclick="submitReport()" id="reportSubmitBtn"
+                    style="padding:0.5rem 1rem; background:#2563eb; color:white; border:none;
+                           border-radius:0.375rem; cursor:pointer; font-size:0.875rem;">
+                Надіслати
+            </button>
+        </div>
+    </div>
+</div>
+<body>
+    <div class="header">
+        <h1>🗺️ Карта доступності будівель та доріг Києва</h1>
+        <p>Візуалізація пристосувань для людей з інвалідністю</p>
+    </div>
+
+    <div class="filters">
+        <div class="filter-section">
+            <span class="filter-label">Показати:</span>
+            <select class="layer-select" id="layerType">
+                <option value="buildings">Будівлі</option>
+                <option value="roads">Дороги</option>
+                <option value="both">Будівлі + Дороги</option>
+            </select>
+        </div>
+
+        <div class="filter-section">
+            <span class="filter-label">Тип мобільності:</span>
+            <select class="mobility-select" id="mobilityType">
+                <option value="all">Всі пристосування</option>
+            </select>
+        </div>
+
+        <div class="filter-section">
+            <span class="filter-label">Фільтр:</span>
+            <button class="filter-btn active" data-filter="all">Всі</button>
+            <button class="filter-btn" data-filter="good">Високий (75%+)</button>
+            <button class="filter-btn" data-filter="medium">Середній (50-75%)</button>
+            <button class="filter-btn" data-filter="poor">Низький (0-50%)</button>
+        </div>
+
+        <!--<div class="filter-section">
+            <span class="filter-label">Граф:</span>
+            <button class="filter-btn" id="showNodesBtn">Показати вершини</button>-->
+            <!--<button class="filter-btn" id="hideNodesBtn">Сховати вершини</button>
+        <button class="filter-btn" id="connectGraphBtn">З'єднати граф</button>-->
+            <!--<label style="font-size: 0.875rem; margin-left: 0.5rem;">
+                <input type="checkbox" id="includeIntersections">
+                З перетинами
+            </label>
+    </div>-->
+
+        <div class="filter-section">
+            <span class="filter-label">Маршрут:</span>
+            <button class="filter-btn" id="routingBtn">Побудувати маршрут</button>
+        </div>
+
+        <!--<div class="filter-section">
+            <button class="filter-btn" id="reportBtn">📷 Повідомити про проблему</button>
+        </div>-->
+
+        <div class="filter-section">
+            <span class="filter-label">До будівлі:</span>
+            <div class="building-search-wrapper" style="position:relative;">
+                <input type="text" id="buildingSearchInput"
+                       placeholder="Назва або адреса..."
+                       style="padding:0.5rem 1rem;border:1px solid #d1d5db;border-radius:0.375rem;font-size:0.875rem;width:250px;background:white;">
+                <div id="buildingSearchDropdown" style="display:none;position:absolute;top:100%;left:0;width:100%;background:white;border:1px solid #d1d5db;border-radius:0.375rem;box-shadow:0 4px 12px rgba(0,0,0,0.15);z-index:2000;max-height:300px;overflow-y:auto;"></div>
+            </div>
+        </div>
+
+        <div class="filter-section">
+            <span class="filter-label">До типу об'єкту:</span>
+            <select id="buildingTypeSelect" class="layer-select" style="min-width:160px;">
+                <option value="">— обрати тип —</option>
+                <option value="Громадська вбиральня">🚻 Вбиральня</option>
+                <option value="Лікарня">🏥 Лікарня</option>
+                <option value="Укриття">🛡️ Укриття</option>
+                <option value="Паркінг">🅿️ Паркінг</option>
+                <option value="Підземний паркінг">🅿️ Підземний паркінг</option>
+            </select>
+            <label style="font-size:0.8rem;display:flex;align-items:center;gap:0.3rem;">
+                <input type="radio" name="routeMode" id="modeOptRoute" checked> Найближчий
+            </label>
+            <label style="font-size:0.8rem;display:flex;align-items:center;gap:0.3rem;">
+                <input type="radio" name="routeMode" id="modeOptBuilding"> Найдоступніший
+            </label>
+            <button class="filter-btn" id="routeToBuildingTypeBtn">Побудувати</button>
+        </div>
+
+        <div class="legend">
+            <span style="font-weight: 500;">Легенда:</span>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #DC2626;"></div>
+                <span>0%</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #F97316;"></div>
+                <span>1-33%</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #EAB308;"></div>
+                <span>34-66%</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #84CC16;"></div>
+                <span>67-99%</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #22C55E;"></div>
+                <span>100%</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="map-container">
+        <div id="map"></div>
+        <div class="info-panel" id="infoPanel"></div>
+    </div>
+
+    <div class="loading" id="loading">Завантаження даних...</div>
+
+    <div class="filter-section">
+        <button class="filter-btn" id="assistantBtn" onclick="toggleAssistant()">
+            🤖 AI-асистент
+        </button>
+    </div>
+
+    <!-- ── Чат-вікно асистента ── -->
+    <div id="assistantPanel" style="
+    display: none;
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 360px;
+    height: 520px;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    z-index: 3000;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+">
+        <!-- Заголовок -->
+        <div style="
+        background: linear-gradient(135deg, #1d4ed8, #2563eb);
+        padding: 1rem 1.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-shrink: 0;
+    ">
+            <div style="display:flex; align-items:center; gap:0.6rem;">
+                <div style="
+                width:36px; height:36px; border-radius:50%;
+                background:rgba(255,255,255,0.2);
+                display:flex; align-items:center; justify-content:center;
+                font-size:1.1rem;
+            ">
+                    🤖
+                </div>
+                <div>
+                    <div style="color:white; font-weight:600; font-size:0.9rem;">AI-асистент</div>
+                    <div style="color:rgba(255,255,255,0.7); font-size:0.7rem;">Карта доступності Києва</div>
+                </div>
+            </div>
+            <div style="display:flex; gap:0.5rem; align-items:center;">
+                <button onclick="resetConversation()" title="Почати заново"
+                        style="background:rgba(255,255,255,0.15); border:none; color:white;
+                           width:28px; height:28px; border-radius:50%; cursor:pointer;
+                           font-size:0.9rem; display:flex; align-items:center; justify-content:center;">
+                    ↺
+                </button>
+                <button onclick="closeAssistant()"
+                        style="background:rgba(255,255,255,0.15); border:none; color:white;
+                           width:28px; height:28px; border-radius:50%; cursor:pointer;
+                           font-size:1.1rem; display:flex; align-items:center; justify-content:center;">
+                    ×
+                </button>
+            </div>
+        </div>
+
+        <!-- Повідомлення -->
+        <div id="assistantMessages" style="
+        flex: 1;
+        overflow-y: auto;
+        padding: 1rem;
+        background: #f8fafc;
+    "></div>
+
+        <!-- Індикатор друкування -->
+        <div id="assistantTyping" style="
+        display: none;
+        padding: 0.5rem 1rem;
+        align-items: center;
+        gap: 0.4rem;
+        background: #f8fafc;
+    ">
+            <div style="display:flex; gap:3px; align-items:center;">
+                <div style="width:6px;height:6px;border-radius:50%;background:#94a3b8;
+                        animation:typing 1s infinite 0s;"></div>
+                <div style="width:6px;height:6px;border-radius:50%;background:#94a3b8;
+                        animation:typing 1s infinite 0.2s;"></div>
+                <div style="width:6px;height:6px;border-radius:50%;background:#94a3b8;
+                        animation:typing 1s infinite 0.4s;"></div>
+            </div>
+            <span style="font-size:0.75rem; color:#94a3b8;">Асистент друкує...</span>
+        </div>
+
+        <!-- Поле вводу -->
+        <div style="
+        padding: 0.75rem 1rem;
+        border-top: 1px solid #e2e8f0;
+        display: flex;
+        gap: 0.5rem;
+        background: white;
+        flex-shrink: 0;
+    ">
+            <input id="assistantInput"
+                   type="text"
+                   placeholder="Напишіть повідомлення..."
+                   onkeydown="handleAssistantKeydown(event)"
+                   style="
+                   flex: 1;
+                   padding: 0.5rem 0.75rem;
+                   border: 1px solid #e2e8f0;
+                   border-radius: 0.5rem;
+                   font-size: 0.875rem;
+                   outline: none;
+                   font-family: inherit;
+               ">
+            <button onclick="sendUserMessage()" style="
+            padding: 0.5rem 0.75rem;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        " onmouseover="this.style.background='#1d4ed8'"
+                    onmouseout="this.style.background='#2563eb'">
+                ➤
+            </button>
+        </div>
+    </div>
+
+    <!-- Анімація для індикатора друкування -->
+    <style>
+        @@keyframes typing {
+            0%, 100%
+
+        {
+            opacity: 0.3;
+            transform: scale(0.8);
+        }
+
+        50% {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+
+        }</style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+    <script src="~/js/accessibility-map/state.js" asp-append-version="true"></script>
+    <script src="~/js/accessibility-map/utils.js" asp-append-version="true"></script>
+    <script src="~/js/accessibility-map/info-panel.js" asp-append-version="true"></script>
+    <script src="~/js/accessibility-map/buildings.js" asp-append-version="true"></script>
+    <script src="~/js/accessibility-map/roads.js" asp-append-version="true"></script>
+    <script src="~/js/accessibility-map/graph.js" asp-append-version="true"></script>
+    <script src="~/js/accessibility-map/routing.js" asp-append-version="true"></script>
+    <script src="~/js/accessibility-map/main.js" asp-append-version="true"></script>
+    <script src="~/js/assistant.js"></script>
+    <script src="~/js/report.js"></script>
+</body>
+</html>
