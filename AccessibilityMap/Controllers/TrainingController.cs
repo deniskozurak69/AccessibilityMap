@@ -219,7 +219,7 @@ namespace KyivAccessibilityMap.Controllers
                 var result = new List<object>();
                 await foreach (var job in jobs)
                 {
-                    if (job.State == JobState.Failed) continue;
+                    //if (job.State == JobState.Failed) continue;
                     result.Add(new
                     {
                         name = job.DisplayName,

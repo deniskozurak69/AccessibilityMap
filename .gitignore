@@ -3,3 +3,5 @@ bin/  obj/  .vs/
 bin/ 
 obj/ 
 .vs/ 
+AccessibilityMap/kyiv_buildings.json
+AccessibilityMap/obj/
