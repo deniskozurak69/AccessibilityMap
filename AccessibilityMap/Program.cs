@@ -69,9 +69,11 @@ async Task EnsureLocalFiles(WebApplication app)
 
 GoogleCredential GetCredential(string keyPath)
 {
-    var json = Environment.GetEnvironmentVariable("GCLOUD_KEY_JSON");
-    if (!string.IsNullOrEmpty(json))
+    var base64 = Environment.GetEnvironmentVariable("GCLOUD_KEY_JSON");
+    if (!string.IsNullOrEmpty(base64))
     {
+        var jsonBytes = Convert.FromBase64String(base64);
+        var json = System.Text.Encoding.UTF8.GetString(jsonBytes);
         return GoogleCredential.FromJson(json);
     }
     return GoogleCredential.FromFile(keyPath);
