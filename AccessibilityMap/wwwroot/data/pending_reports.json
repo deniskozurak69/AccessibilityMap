@@ -1959,5 +1959,48 @@
       }
     },
     "Status": "pending"
+  },
+  {
+    "Id": "56536615-b491-44cd-bc27-0dd55099f430",
+    "CreatedAt": "2026-06-18T21:09:18.6357228Z",
+    "ImagePath": "/uploads/fc53e4bb-9fdd-4b37-a2be-15ba6234db21.png",
+    "Lat": null,
+    "Lon": null,
+    "RoadLat": 50.4487892,
+    "RoadLon": 30.4961313,
+    "NearestRoadId": "428274145",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "slight",
+        "confidence": 0.9992
+      },
+      "ramp": {
+        "class": "ramp",
+        "confidence": 0.5735
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.8018
+      },
+      "lit": {
+        "class": "unlit",
+        "confidence": 0.8598
+      },
+      "tactile_paving": {
+        "class": "yes",
+        "confidence": 0.9999
+      },
+      "surface_type": {
+        "class": "concrete",
+        "confidence": 0.5523
+      },
+      "surface_quality": {
+        "class": "good",
+        "confidence": 0.4585
+      }
+    },
+    "Status": "pending"
   }
 ]
