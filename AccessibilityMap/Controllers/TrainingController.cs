@@ -38,12 +38,14 @@ namespace KyivAccessibilityMap.Controllers
             _config = config;
         }
 
-        // ── Отримати credentials: спершу з env-змінної (Render), потім з файлу (локально) ──
+        // ── Отримати credentials: спершу з env-змінної (Render, Base64), потім з файлу (локально) ──
         private GoogleCredential GetCredential()
         {
-            var json = Environment.GetEnvironmentVariable("GCLOUD_KEY_JSON");
-            if (!string.IsNullOrEmpty(json))
+            var base64 = Environment.GetEnvironmentVariable("GCLOUD_KEY_JSON");
+            if (!string.IsNullOrEmpty(base64))
             {
+                var jsonBytes = Convert.FromBase64String(base64);
+                var json = System.Text.Encoding.UTF8.GetString(jsonBytes);
                 return GoogleCredential.FromJson(json);
             }
             return GoogleCredential.FromFile(KeyFilePath);
