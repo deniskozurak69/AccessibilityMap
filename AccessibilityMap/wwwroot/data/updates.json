@@ -20,5 +20,25 @@
     "width": 2,
     "ramp": "no",
     "roughness": "severe"
+  },
+  "107435948": {
+    "smoothness": "good",
+    "tactile_paving": "yes",
+    "roughness": "slight"
+  },
+  "1251159055": {
+    "smoothness": "excellent",
+    "tactile_paving": "no",
+    "roughness": "slight"
+  },
+  "136994791": {
+    "smoothness": "good",
+    "tactile_paving": "yes",
+    "roughness": "slight"
+  },
+  "198882229": {
+    "smoothness": "excellent",
+    "tactile_paving": "no",
+    "roughness": "smooth"
   }
 }

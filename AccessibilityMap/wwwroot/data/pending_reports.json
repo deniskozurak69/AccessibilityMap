@@ -5,6 +5,8 @@
     "ImagePath": "/uploads/b7e748e3-837f-46bc-97af-c9d7aca0c90a.jpg",
     "Lat": null,
     "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
     "NearestRoadId": null,
     "NearestRoadName": null,
     "RoadType": null,
@@ -46,6 +48,8 @@
     "ImagePath": "/uploads/fc171e3e-303b-482b-a09d-2007de3ae647.jpg",
     "Lat": null,
     "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
     "NearestRoadId": null,
     "NearestRoadName": null,
     "RoadType": null,
@@ -87,6 +91,8 @@
     "ImagePath": "/uploads/63648d88-649f-4f23-adb9-42d531f64b3d.jpg",
     "Lat": null,
     "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
     "NearestRoadId": null,
     "NearestRoadName": null,
     "RoadType": null,
@@ -128,6 +134,8 @@
     "ImagePath": "/uploads/46cff4da-cb27-4bd1-a615-3ca74a6264e7.jpg",
     "Lat": null,
     "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
     "NearestRoadId": null,
     "NearestRoadName": null,
     "RoadType": null,
@@ -169,6 +177,8 @@
     "ImagePath": "/uploads/a393a678-160c-4e11-b837-8d5fbf6eff0a.jpg",
     "Lat": null,
     "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
     "NearestRoadId": null,
     "NearestRoadName": null,
     "RoadType": null,
@@ -210,6 +220,8 @@
     "ImagePath": "/uploads/e48835de-2ca9-4dbb-9b43-033998035afd.jpg",
     "Lat": null,
     "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
     "NearestRoadId": null,
     "NearestRoadName": null,
     "RoadType": null,
@@ -251,6 +263,8 @@
     "ImagePath": "/uploads/29c18b8a-c20f-468c-af7c-51e2be097bc9.jpg",
     "Lat": null,
     "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
     "NearestRoadId": null,
     "NearestRoadName": null,
     "RoadType": null,
@@ -292,6 +306,8 @@
     "ImagePath": "/uploads/6c21d6bb-ee0d-40a4-8d53-a87f0aecac53.jpg",
     "Lat": null,
     "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
     "NearestRoadId": null,
     "NearestRoadName": null,
     "RoadType": null,
@@ -313,6 +329,8 @@
     "ImagePath": "/uploads/e4aa3759-753e-46e9-9c5b-5ea366222970.jpg",
     "Lat": null,
     "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
     "NearestRoadId": "1414900441",
     "NearestRoadName": "",
     "RoadType": "sidewalk",
@@ -346,6 +364,8 @@
     "ImagePath": "/uploads/dd35ebd9-1a3c-4434-af90-525417ca74b6.jpg",
     "Lat": null,
     "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
     "NearestRoadId": "1068835260",
     "NearestRoadName": "",
     "RoadType": "sidewalk",
@@ -387,6 +407,8 @@
     "ImagePath": "/uploads/3b72ea25-0007-4c77-bef8-a5ec1f9d7ab4.jpg",
     "Lat": null,
     "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
     "NearestRoadId": "1068835260",
     "NearestRoadName": "",
     "RoadType": "sidewalk",
@@ -428,6 +450,8 @@
     "ImagePath": "/uploads/e8e0ecdf-1009-4429-b457-badb23a0c91c.jpg",
     "Lat": null,
     "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
     "NearestRoadId": "1068835260",
     "NearestRoadName": "",
     "RoadType": "sidewalk",
@@ -469,6 +493,8 @@
     "ImagePath": "/uploads/735b8e07-7b8f-48ca-9c0d-c80e39b39307.jpg",
     "Lat": null,
     "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
     "NearestRoadId": "1068835260",
     "NearestRoadName": "",
     "RoadType": "sidewalk",
@@ -510,6 +536,8 @@
     "ImagePath": "/uploads/267d8656-1db6-4c6a-941b-6eb9d4a386f6.jpg",
     "Lat": null,
     "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
     "NearestRoadId": "320783434",
     "NearestRoadName": "",
     "RoadType": "sidewalk",
@@ -551,6 +579,8 @@
     "ImagePath": "/uploads/1da80dde-039c-4d1b-8d89-b1b3839f2252.jpg",
     "Lat": null,
     "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
     "NearestRoadId": "1428100301",
     "NearestRoadName": "",
     "RoadType": "sidewalk",
@@ -588,6 +618,8 @@
     "ImagePath": "/uploads/00a93727-9abe-4f35-87df-5cb1747adec6.jpg",
     "Lat": null,
     "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
     "NearestRoadId": "1068835260",
     "NearestRoadName": "",
     "RoadType": "sidewalk",
@@ -629,6 +661,8 @@
     "ImagePath": "/uploads/ee730929-714d-4414-9c56-bbe5910ba4e0.jpg",
     "Lat": null,
     "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
     "NearestRoadId": "1068835260",
     "NearestRoadName": "",
     "RoadType": "sidewalk",
@@ -670,6 +704,8 @@
     "ImagePath": "/uploads/7caeb956-a7f4-49c1-a389-5c0c4db5886a.jpg",
     "Lat": null,
     "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
     "NearestRoadId": "1375979767",
     "NearestRoadName": "",
     "RoadType": "sidewalk",
@@ -711,6 +747,8 @@
     "ImagePath": "/uploads/72596282-3cdd-4593-94b1-9e7adc532a82.jpg",
     "Lat": null,
     "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
     "NearestRoadId": "1068835260",
     "NearestRoadName": "",
     "RoadType": "sidewalk",
@@ -752,6 +790,8 @@
     "ImagePath": "/uploads/97557a88-e7b5-4176-8a2b-4a91b492fec2.jpg",
     "Lat": null,
     "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
     "NearestRoadId": "1239176329",
     "NearestRoadName": "",
     "RoadType": "sidewalk",
@@ -785,7 +825,7 @@
         "confidence": 0.6995
       }
     },
-    "Status": "pending"
+    "Status": "rejected"
   },
   {
     "Id": "b6480fb7-890f-42a5-9f77-b5b6da8c8670",
@@ -793,6 +833,8 @@
     "ImagePath": "/uploads/650d834b-ff98-4736-bdce-9f7ba5f90910.jpg",
     "Lat": null,
     "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
     "NearestRoadId": "1239176329",
     "NearestRoadName": "",
     "RoadType": "sidewalk",
@@ -826,7 +868,7 @@
         "confidence": 0.6995
       }
     },
-    "Status": "pending"
+    "Status": "rejected"
   },
   {
     "Id": "cfd4bcd0-be98-410b-92f3-07b5cf4b2345",
@@ -834,6 +876,8 @@
     "ImagePath": "/uploads/f088568d-0585-44ea-a196-f08c41daf58d.jpg",
     "Lat": null,
     "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
     "NearestRoadId": "1239176329",
     "NearestRoadName": "",
     "RoadType": "sidewalk",
@@ -867,7 +911,7 @@
         "confidence": 0.6995
       }
     },
-    "Status": "pending"
+    "Status": "rejected"
   },
   {
     "Id": "7cb64bad-e618-4a2f-8ce4-422a87266a88",
@@ -875,6 +919,8 @@
     "ImagePath": "/uploads/29782427-1009-44a7-87c7-6adf30aec0b4.jpg",
     "Lat": null,
     "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
     "NearestRoadId": "1239176329",
     "NearestRoadName": "",
     "RoadType": "sidewalk",
@@ -908,7 +954,7 @@
         "confidence": 0.6995
       }
     },
-    "Status": "pending"
+    "Status": "rejected"
   },
   {
     "Id": "65242c76-b7be-4133-b097-6dd41a2b1c70",
@@ -916,6 +962,8 @@
     "ImagePath": "/uploads/57be38c7-7c05-4b60-b0df-898de17870d0.jpg",
     "Lat": null,
     "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
     "NearestRoadId": "1239176329",
     "NearestRoadName": "",
     "RoadType": "sidewalk",
@@ -949,7 +997,7 @@
         "confidence": 0.6995
       }
     },
-    "Status": "pending"
+    "Status": "rejected"
   },
   {
     "Id": "95abf3e6-a429-46ba-9d83-259ffb513522",
@@ -957,6 +1005,8 @@
     "ImagePath": "/uploads/9b62cbe7-ab02-461f-b381-0b419fa0e4a6.jpg",
     "Lat": null,
     "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
     "NearestRoadId": "588442908",
     "NearestRoadName": "",
     "RoadType": "sidewalk",
@@ -990,7 +1040,7 @@
         "confidence": 0.4691
       }
     },
-    "Status": "pending"
+    "Status": "rejected"
   },
   {
     "Id": "25701c14-6612-4531-867b-c7786f816b60",
@@ -998,6 +1048,8 @@
     "ImagePath": "/uploads/7c4664c7-e4db-4045-a281-bd1ae554463c.jpg",
     "Lat": null,
     "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
     "NearestRoadId": "449126781",
     "NearestRoadName": "",
     "RoadType": "sidewalk",
@@ -1031,7 +1083,7 @@
         "confidence": 0.4691
       }
     },
-    "Status": "pending"
+    "Status": "rejected"
   },
   {
     "Id": "60c6ba62-6ced-4ffc-bd96-e4083afc295a",
@@ -1039,6 +1091,8 @@
     "ImagePath": "/uploads/c9675dc1-95d9-4896-8cd6-a925e2d1ceb9.jpg",
     "Lat": null,
     "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
     "NearestRoadId": "501622933",
     "NearestRoadName": "",
     "RoadType": "sidewalk",
@@ -1072,7 +1126,7 @@
         "confidence": 0.5296
       }
     },
-    "Status": "pending"
+    "Status": "rejected"
   },
   {
     "Id": "355f8b4a-134a-4e9f-a36e-9d73fdadfe8e",
@@ -1080,6 +1134,8 @@
     "ImagePath": "/uploads/d3dcb671-cb61-4e26-b2d0-a51ecb8c6aaf.jpg",
     "Lat": null,
     "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
     "NearestRoadId": "310281942",
     "NearestRoadName": "",
     "RoadType": "sidewalk",
@@ -1113,7 +1169,7 @@
         "confidence": 0.5369
       }
     },
-    "Status": "pending"
+    "Status": "rejected"
   },
   {
     "Id": "098a4f3e-06de-401f-a5e9-62d3168c6fc7",
@@ -1121,6 +1177,8 @@
     "ImagePath": "/uploads/1791d080-4725-475d-8f91-0a24b365a203.jpg",
     "Lat": null,
     "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
     "NearestRoadId": "310281942",
     "NearestRoadName": "",
     "RoadType": "sidewalk",
@@ -1154,7 +1212,7 @@
         "confidence": 0.5369
       }
     },
-    "Status": "pending"
+    "Status": "rejected"
   },
   {
     "Id": "e2702bdd-d6b5-46a0-b866-61342905823f",
@@ -1162,6 +1220,8 @@
     "ImagePath": "/uploads/686858a5-17bc-4365-bca0-c58059ded2b3.jpg",
     "Lat": null,
     "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
     "NearestRoadId": "1391460916",
     "NearestRoadName": "",
     "RoadType": "sidewalk",
@@ -1195,7 +1255,7 @@
         "confidence": 0.4496
       }
     },
-    "Status": "pending"
+    "Status": "rejected"
   },
   {
     "Id": "a629ae3c-da06-4820-bda6-f6a7c4519b57",
@@ -1203,6 +1263,8 @@
     "ImagePath": "/uploads/8600b2af-042f-4861-aa69-57cbd0135e1b.jpg",
     "Lat": null,
     "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
     "NearestRoadId": "1391460916",
     "NearestRoadName": "",
     "RoadType": "sidewalk",
@@ -1236,7 +1298,7 @@
         "confidence": 0.5369
       }
     },
-    "Status": "pending"
+    "Status": "rejected"
   },
   {
     "Id": "46086c1f-0d37-4999-bf4c-d6090482c624",
@@ -1244,6 +1306,8 @@
     "ImagePath": "/uploads/5d795a96-bf71-42aa-b80b-967c0f49a14f.jpg",
     "Lat": null,
     "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
     "NearestRoadId": null,
     "NearestRoadName": null,
     "RoadType": null,
@@ -1277,7 +1341,7 @@
         "confidence": 0.6995
       }
     },
-    "Status": "pending"
+    "Status": "rejected"
   },
   {
     "Id": "6a8df493-1bcb-453e-9d3a-cbc0304319cf",
@@ -1285,6 +1349,8 @@
     "ImagePath": "/uploads/071a732e-cb12-453c-b283-2093862c0674.jpg",
     "Lat": null,
     "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
     "NearestRoadId": "280199072",
     "NearestRoadName": "",
     "RoadType": "sidewalk",
@@ -1326,6 +1392,8 @@
     "ImagePath": "/uploads/cdf26bad-4500-4741-8617-5eea4d009d37.jpg",
     "Lat": null,
     "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
     "NearestRoadId": "48529",
     "NearestRoadName": "",
     "RoadType": "sidewalk",
@@ -1359,7 +1427,7 @@
         "confidence": 0.4496
       }
     },
-    "Status": "pending"
+    "Status": "rejected"
   },
   {
     "Id": "fbced589-4839-4f56-94c3-1bf1aefcd036",
@@ -1367,6 +1435,8 @@
     "ImagePath": "/uploads/bee9b31b-e078-4e02-8761-baafbb1696d2.jpg",
     "Lat": null,
     "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
     "NearestRoadId": "138591",
     "NearestRoadName": "",
     "RoadType": "sidewalk",
@@ -1382,6 +1452,510 @@
       "surface_quality": {
         "class": "excellent",
         "confidence": 0.5369
+      }
+    },
+    "Status": "rejected"
+  },
+  {
+    "Id": "ef8ca6a9-5856-4737-aade-05724056538a",
+    "CreatedAt": "2026-05-22T23:55:23.060936Z",
+    "ImagePath": "/uploads/df785f4b-25ad-40e8-b8e0-645b1330ac64.jpg",
+    "Lat": null,
+    "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
+    "NearestRoadId": "49703",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "smooth",
+        "confidence": 0.9019
+      },
+      "ramp": {
+        "class": "ramp",
+        "confidence": 0.5067
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.872
+      },
+      "lit": {
+        "class": "unlit",
+        "confidence": 0.8772
+      },
+      "tactile_paving": {
+        "class": "no",
+        "confidence": 0.9558
+      },
+      "surface_type": {
+        "class": "unpaved",
+        "confidence": 0.967
+      },
+      "surface_quality": {
+        "class": "good",
+        "confidence": 0.5761
+      }
+    },
+    "Status": "rejected"
+  },
+  {
+    "Id": "ca919709-a9e3-441d-b405-11b6f71618b3",
+    "CreatedAt": "2026-05-23T00:17:23.3974762Z",
+    "ImagePath": "/uploads/116b8c57-a5f6-4180-87eb-0ab4de7adab6.jpg",
+    "Lat": null,
+    "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
+    "NearestRoadId": "157185",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "severe",
+        "confidence": 0.9978
+      },
+      "tactile_paving": {
+        "class": "yes",
+        "confidence": 0.9265
+      },
+      "surface_quality": {
+        "class": "intermediate",
+        "confidence": 0.6387
+      }
+    },
+    "Status": "rejected"
+  },
+  {
+    "Id": "56590d6f-c0e3-4efd-b7e1-2b3a4bba5518",
+    "CreatedAt": "2026-05-23T00:18:58.80337Z",
+    "ImagePath": "/uploads/a0cdff13-3cfe-4b1c-9184-58fb0f6e1172.jpg",
+    "Lat": null,
+    "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
+    "NearestRoadId": "123435",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "smooth",
+        "confidence": 0.9019
+      },
+      "ramp": {
+        "class": "ramp",
+        "confidence": 0.5067
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.872
+      },
+      "lit": {
+        "class": "unlit",
+        "confidence": 0.8772
+      },
+      "tactile_paving": {
+        "class": "no",
+        "confidence": 0.9558
+      },
+      "surface_type": {
+        "class": "unpaved",
+        "confidence": 0.967
+      },
+      "surface_quality": {
+        "class": "good",
+        "confidence": 0.5761
+      }
+    },
+    "Status": "rejected"
+  },
+  {
+    "Id": "e269baca-2a84-44c8-83a7-a05d42c9fedc",
+    "CreatedAt": "2026-05-23T00:23:00.2199218Z",
+    "ImagePath": "/uploads/7c6ba7c0-724c-4c7a-bf9a-b9220ceb9b66.png",
+    "Lat": null,
+    "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
+    "NearestRoadId": "212373",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "slight",
+        "confidence": 0.9987
+      },
+      "tactile_paving": {
+        "class": "yes",
+        "confidence": 0.9992
+      },
+      "surface_quality": {
+        "class": "intermediate",
+        "confidence": 0.4604
+      }
+    },
+    "Status": "rejected"
+  },
+  {
+    "Id": "7690a680-0899-417b-b030-a5384163fcad",
+    "CreatedAt": "2026-05-23T00:28:58.7721256Z",
+    "ImagePath": "/uploads/1229e1d6-2a6c-4337-8419-f4f31c3269ae.png",
+    "Lat": null,
+    "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
+    "NearestRoadId": "165343",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "slight",
+        "confidence": 0.9987
+      },
+      "ramp": {
+        "class": "no_ramp",
+        "confidence": 0.784
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.8945
+      },
+      "lit": {
+        "class": "unlit",
+        "confidence": 0.505
+      },
+      "tactile_paving": {
+        "class": "yes",
+        "confidence": 0.9992
+      },
+      "surface_type": {
+        "class": "sett",
+        "confidence": 0.6078
+      },
+      "surface_quality": {
+        "class": "intermediate",
+        "confidence": 0.4604
+      }
+    },
+    "Status": "rejected"
+  },
+  {
+    "Id": "cfe56847-a1bb-4e3e-8f20-5cb375fc2fe6",
+    "CreatedAt": "2026-05-23T00:33:26.0555726Z",
+    "ImagePath": "/uploads/ab64d470-95f1-4c01-a4c3-38db5a723cd4.png",
+    "Lat": null,
+    "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
+    "NearestRoadId": "180627",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "slight",
+        "confidence": 0.9987
+      },
+      "tactile_paving": {
+        "class": "yes",
+        "confidence": 0.9992
+      },
+      "surface_quality": {
+        "class": "intermediate",
+        "confidence": 0.4604
+      }
+    },
+    "Status": "rejected"
+  },
+  {
+    "Id": "e5fc63b0-f7f7-4880-a806-cbdb90313133",
+    "CreatedAt": "2026-05-24T00:54:26.5284462Z",
+    "ImagePath": "/uploads/002ca47c-fc0c-448f-b778-a807043c96b0.jpg",
+    "Lat": null,
+    "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
+    "NearestRoadId": null,
+    "NearestRoadName": null,
+    "RoadType": null,
+    "MlResults": {
+      "smoothness": {
+        "class": "slight",
+        "confidence": 0.5157
+      },
+      "ramp": {
+        "class": "no_ramp",
+        "confidence": 0.7066
+      },
+      "width": {
+        "class": "narrow",
+        "confidence": 0.7126
+      },
+      "lit": {
+        "class": "lit",
+        "confidence": 0.6354
+      },
+      "tactile_paving": {
+        "class": "no",
+        "confidence": 0.6215
+      },
+      "surface_type": {
+        "class": "asphalt",
+        "confidence": 0.634
+      },
+      "surface_quality": {
+        "class": "good",
+        "confidence": 0.3208
+      }
+    },
+    "Status": "rejected"
+  },
+  {
+    "Id": "f4bd15c9-d804-4ee6-ba8c-fbd0c35abfef",
+    "CreatedAt": "2026-05-24T14:25:46.4820769Z",
+    "ImagePath": "/uploads/5801d416-2b88-428d-965b-8474ac7d5140.jpg",
+    "Lat": null,
+    "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
+    "NearestRoadId": "107437628",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "slight",
+        "confidence": 0.6904
+      },
+      "tactile_paving": {
+        "class": "yes",
+        "confidence": 0.9921
+      },
+      "surface_quality": {
+        "class": "good",
+        "confidence": 0.3729
+      }
+    },
+    "Status": "rejected"
+  },
+  {
+    "Id": "d82a7bf4-a3e9-4507-885c-83c9d1696271",
+    "CreatedAt": "2026-05-24T14:26:47.9940625Z",
+    "ImagePath": "/uploads/a0063aaf-dc15-449d-898c-58b0d7c3c1bc.jpg",
+    "Lat": null,
+    "Lon": null,
+    "RoadLat": null,
+    "RoadLon": null,
+    "NearestRoadId": "136994818",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "smooth",
+        "confidence": 0.645
+      },
+      "surface_quality": {
+        "class": "good",
+        "confidence": 0.5208
+      }
+    },
+    "Status": "rejected"
+  },
+  {
+    "Id": "0a294e25-0608-44ab-8eb6-13a1a05985fb",
+    "CreatedAt": "2026-05-24T16:10:26.1025695Z",
+    "ImagePath": "/uploads/c3af903c-3d44-4f78-a88d-508926a56306.png",
+    "Lat": null,
+    "Lon": null,
+    "RoadLat": 50.4452053,
+    "RoadLon": 30.5096158,
+    "NearestRoadId": "107435948",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "slight",
+        "confidence": 0.9992
+      },
+      "tactile_paving": {
+        "class": "yes",
+        "confidence": 0.9999
+      },
+      "surface_quality": {
+        "class": "good",
+        "confidence": 0.4585
+      }
+    },
+    "Status": "approved"
+  },
+  {
+    "Id": "cedd92ba-9f22-40a9-bb64-b03640ca7dbb",
+    "CreatedAt": "2026-05-24T16:44:17.8811595Z",
+    "ImagePath": "/uploads/c84f5b00-4218-4a3b-be88-de0d978a6798.jpg",
+    "Lat": null,
+    "Lon": null,
+    "RoadLat": 50.4500991,
+    "RoadLon": 30.5130385,
+    "NearestRoadId": "1251159055",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "slight",
+        "confidence": 0.7213
+      },
+      "tactile_paving": {
+        "class": "yes",
+        "confidence": 0.7587
+      },
+      "surface_quality": {
+        "class": "excellent",
+        "confidence": 0.6813
+      }
+    },
+    "Status": "approved"
+  },
+  {
+    "Id": "0b552fc4-088a-40b4-870b-82e2c458faeb",
+    "CreatedAt": "2026-05-24T19:59:07.1213348Z",
+    "ImagePath": "/uploads/9ce02734-7093-4523-b9a0-81580d2c9b59.jpg",
+    "Lat": null,
+    "Lon": null,
+    "RoadLat": 50.4431683,
+    "RoadLon": 30.5150666,
+    "NearestRoadId": "261084754",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "severe",
+        "confidence": 0.9978
+      },
+      "ramp": {
+        "class": "no_ramp",
+        "confidence": 0.8611
+      },
+      "width": {
+        "class": "wide",
+        "confidence": 0.9125
+      },
+      "lit": {
+        "class": "unlit",
+        "confidence": 0.8826
+      },
+      "tactile_paving": {
+        "class": "yes",
+        "confidence": 0.9265
+      },
+      "surface_type": {
+        "class": "concrete",
+        "confidence": 0.9846
+      },
+      "surface_quality": {
+        "class": "intermediate",
+        "confidence": 0.6387
+      }
+    },
+    "Status": "rejected"
+  },
+  {
+    "Id": "6520b851-4df6-498c-bc55-fee8a93c92b1",
+    "CreatedAt": "2026-05-24T20:15:41.7905163Z",
+    "ImagePath": "/uploads/da40443f-b1ba-4e4a-8d31-f8e23c049a70.jpg",
+    "Lat": null,
+    "Lon": null,
+    "RoadLat": 50.4442386,
+    "RoadLon": 30.5095765,
+    "NearestRoadId": "198882229",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "smooth",
+        "confidence": 0.9823
+      },
+      "tactile_paving": {
+        "class": "yes",
+        "confidence": 0.827
+      },
+      "surface_quality": {
+        "class": "excellent",
+        "confidence": 0.4502
+      }
+    },
+    "Status": "approved"
+  },
+  {
+    "Id": "de1dd064-4390-489b-bf08-7458a2cc6fa8",
+    "CreatedAt": "2026-05-24T20:16:31.7422585Z",
+    "ImagePath": "/uploads/0a9c3c80-9c87-448a-a0cd-4976d4c85054.png",
+    "Lat": null,
+    "Lon": null,
+    "RoadLat": 50.4447608,
+    "RoadLon": 30.5083812,
+    "NearestRoadId": "136994791",
+    "NearestRoadName": "\u0411\u043E\u0442\u0430\u043D\u0456\u0447\u043D\u0430 \u043F\u043B\u043E\u0449\u0430",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "slight",
+        "confidence": 0.9992
+      },
+      "tactile_paving": {
+        "class": "yes",
+        "confidence": 0.9999
+      },
+      "surface_quality": {
+        "class": "good",
+        "confidence": 0.4585
+      }
+    },
+    "Status": "approved"
+  },
+  {
+    "Id": "9b5b9547-352f-4c15-af8d-dd742e060454",
+    "CreatedAt": "2026-05-24T20:17:28.1689967Z",
+    "ImagePath": "/uploads/da0c870c-bc8f-4825-be7a-aafc55ea03eb.png",
+    "Lat": null,
+    "Lon": null,
+    "RoadLat": 50.4465307,
+    "RoadLon": 30.5069457,
+    "NearestRoadId": "136994815",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "slight",
+        "confidence": 0.9987
+      },
+      "tactile_paving": {
+        "class": "yes",
+        "confidence": 0.9992
+      },
+      "surface_quality": {
+        "class": "intermediate",
+        "confidence": 0.4604
+      }
+    },
+    "Status": "pending"
+  },
+  {
+    "Id": "5a9bf5c6-a6b2-4902-9a04-3926ce8e1a0d",
+    "CreatedAt": "2026-05-24T20:17:48.4135838Z",
+    "ImagePath": "/uploads/24481e83-a61d-4ee8-b6f3-7800a4463bc9.jpg",
+    "Lat": null,
+    "Lon": null,
+    "RoadLat": 50.4467252,
+    "RoadLon": 30.5096995,
+    "NearestRoadId": "271395768",
+    "NearestRoadName": "",
+    "RoadType": "sidewalk",
+    "MlResults": {
+      "smoothness": {
+        "class": "severe",
+        "confidence": 0.9978
+      },
+      "surface_quality": {
+        "class": "intermediate",
+        "confidence": 0.6387
       }
     },
     "Status": "pending"

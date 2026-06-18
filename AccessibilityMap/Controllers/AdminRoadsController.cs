@@ -186,18 +186,43 @@ namespace KyivAccessibilityMap.Controllers
                 }
             }
 
+            var lit = GetStr("lit");
+            var wheelchair = GetStr("wheelchair");
+            var tactile = GetStr("tactile_paving");
+            var surface = GetStr("surface");
+            var smoothness = GetStr("smoothness");
+            var width = GetNum("width");
+
+            // Підрахунок критеріїв (як на головній сторінці)
+            int score = 0, total = 6;
+            if (lit == "yes") score++;
+            if (wheelchair == "yes") score++;
+            if (tactile == "yes") score++;
+            if (!string.IsNullOrEmpty(surface) && surface != "unknown") score++;
+            if (!string.IsNullOrEmpty(smoothness) && smoothness != "unknown") score++;
+            if (width >= 1.5) score++;
+
+            double percentage = total > 0 ? (double)score / total : 0;
+
+            string color = percentage == 0 ? "#DC2626" :
+                           percentage < 0.33 ? "#F97316" :
+                           percentage < 0.66 ? "#EAB308" :
+                           percentage < 1.0 ? "#84CC16" : "#22C55E";
+
             return new
             {
                 id = s.TryGetProperty("id", out var id) ? id.GetInt64() : 0,
                 name = GetStr("name"),
                 type = GetStr("type"),
-                surface = GetStr("surface"),
-                smoothness = GetStr("smoothness"),
-                width = GetNum("width"),
-                wheelchair = GetStr("wheelchair"),
-                lit = GetStr("lit"),
-                tactile_paving = GetStr("tactile_paving"),
-                coordinates = coords
+                surface,
+                smoothness,
+                width,
+                wheelchair,
+                lit,
+                tactile_paving = tactile,
+                coordinates = coords,
+                percentage,
+                color
             };
         }
 

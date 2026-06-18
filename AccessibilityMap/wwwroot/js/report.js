@@ -21,6 +21,52 @@ document.getElementById('reportPhoto')?.addEventListener('change', function () {
     reader.readAsDataURL(file);
 });
 
+// ── Переклад значень ML ──
+const ML_VALUE_LABELS = {
+    // Нерівність
+    smooth: 'Гладкий',
+    slight: 'Нерівний',
+    severe: 'Дуже нерівний',
+    // Якість покриття
+    excellent: 'Чудова',
+    good: 'Гарна',
+    intermediate: 'Середня',
+    bad: 'Погана',
+    very_bad: 'Дуже погана',
+    // Тип покриття
+    asphalt: 'Асфальт',
+    concrete: 'Бетон',
+    paving_stones: 'Бруківка',
+    sett: 'Кругляк',
+    gravel: 'Гравій',
+    unpaved: 'Грунтова',
+    // Ширина
+    wide: 'Широкий',
+    narrow: 'Вузький',
+};
+
+// Контекстні переклади — yes/no означає різне залежно від поля
+const ML_VALUE_LABELS_BY_KEY = {
+    lit: {
+        yes: 'Наявне', no: 'Відсутнє',
+        lit: 'Наявне', unlit: 'Відсутнє',
+    },
+    ramp: {
+        yes: 'Наявний', no: 'Відсутній',
+        ramp: 'Наявний', no_ramp: 'Відсутній',
+    },
+    tactile_paving: {
+        yes: 'Наявна', no: 'Відсутня',
+    },
+};
+
+function mlLabel(key, rawValue) {
+    if (!rawValue) return rawValue;
+    const byKey = ML_VALUE_LABELS_BY_KEY[key];
+    if (byKey && byKey[rawValue] !== undefined) return byKey[rawValue];
+    return ML_VALUE_LABELS[rawValue] || rawValue;
+}
+
 async function submitReport() {
     console.log('submitReport викликано');
     const photoInput = document.getElementById('reportPhoto');
@@ -48,7 +94,6 @@ async function submitReport() {
     if (selectedRoadForReport) {
         formData.append('roadId', String(selectedRoadForReport.id));
         formData.append('roadName', selectedRoadForReport.name || '');
-        // Центральна координата дороги
         if (selectedRoadForReport.coordinates?.length > 0) {
             const mid = Math.floor(selectedRoadForReport.coordinates.length / 2);
             formData.append('roadLat', selectedRoadForReport.coordinates[mid][0]);
@@ -63,7 +108,7 @@ async function submitReport() {
         });
         console.log('response.ok:', response.ok);
         const data = await response.json();
-
+        console.log('FULL DATA:', JSON.stringify(data));
         if (!response.ok) {
             console.log('response not ok, виходимо');
             showReportStatus('Помилка: ' + data.message, 'error');
@@ -82,6 +127,7 @@ async function submitReport() {
             resultHtml += `🌍 GPS: ${data.gps.lat.toFixed(5)}, ${data.gps.lon.toFixed(5)}<br>`;
         }
         if (data.mlResults) {
+            console.log(data.mlResults)
             resultHtml += '<br>🤖 Результати аналізу:<br>';
             const labels = {
                 smoothness: 'Нерівність',
@@ -90,10 +136,11 @@ async function submitReport() {
                 lit: 'Освітлення',
                 tactile_paving: 'Тактильна плитка',
                 surface_type: 'Тип покриття',
-                surface_quality: 'Якість покриття'
+                surface_quality: 'Якість покриття',
             };
             for (const [key, val] of Object.entries(data.mlResults)) {
-                resultHtml += `• ${labels[key] || key}: <strong>${val.class}</strong> (${Math.round(val.confidence * 100)}%)<br>`;
+                const translatedValue = mlLabel(key, val.class);
+                resultHtml += `• ${labels[key] || key}: <strong>${translatedValue}</strong> (${Math.round(val.confidence * 100)}%)<br>`;
             }
         }
 
@@ -150,10 +197,8 @@ let selectedRoadForReport = null;
 
 function openReportForRoad(road) {
     selectedRoadForReport = road;
-    // Оновлюємо заголовок модального вікна
-    document.querySelector('#reportModal h3').textContent = '📷 Повідомити про проблему';
+    document.querySelector('#reportModal h3').textContent = '📷 Повідомити про стан дороги';
 
-    // Показуємо назву обраної дороги
     let roadInfo = document.getElementById('selectedRoadInfo');
     if (!roadInfo) {
         roadInfo = document.createElement('div');
@@ -162,7 +207,10 @@ function openReportForRoad(road) {
         const firstChild = document.querySelector('#reportModal > div > p');
         firstChild.after(roadInfo);
     }
-    roadInfo.innerHTML = `🛣️ Обрана дорога: <strong>${road.name || `ID: ${road.id}`}</strong>`;
+    roadInfo.innerHTML = `📸 Поради для фото:<br>
+- Пандус, тактильна плитка або освітлення — фотографуйте об'єкт впритул ; <br>
+- Якість покриття та нерівність — знімайте тротуар зблизька ; <br>
+- Ширина дороги — фотографуйте всю ширину тротуару з одного краю`;
 
     openReportModal();
 }
@@ -196,3 +244,18 @@ function closeReportModal() {
 }
 
 document.getElementById('reportBtn')?.addEventListener('click', openReportModal);
+document.getElementById('reportPhotoCamera')?.addEventListener('change', function () {
+    const file = this.files[0];
+    if (!file) return;
+    // Копіюємо файл в основний input щоб submitReport його підхопив
+    const dt = new DataTransfer();
+    dt.items.add(file);
+    document.getElementById('reportPhoto').files = dt.files;
+
+    const reader = new FileReader();
+    reader.onload = (e) => {
+        document.getElementById('reportPreviewImg').src = e.target.result;
+        document.getElementById('reportPreview').style.display = 'block';
+    };
+    reader.readAsDataURL(file);
+});

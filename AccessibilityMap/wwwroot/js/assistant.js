@@ -125,33 +125,46 @@ async function executeCommand(command) {
     if (!command || !command.action) return;
 
     if (command.action === 'route') {
-        // Встановлюємо тип мобільності
         const mobilityType = command.mobilityType || 'all';
         if (typeof changeMobilityType === 'function') {
             await changeMobilityType(mobilityType);
             document.getElementById('mobilityType').value = mobilityType;
         }
 
-        // Будуємо маршрут від Хрещатика до вказаної точки
         appendAssistantMessage(
             `Будую маршрут до "${command.locationName}"... 🗺️\nЗакриваю чат і відображаю на карті.`
         );
 
+        // ── Геокодинг через Nominatim ──
+        let endLat = command.endLat;
+        let endLng = command.endLng;
+
+        if (command.locationName) {
+            try {
+                const geoRes = await fetch(
+                    `/api/gemini/geocode?query=${encodeURIComponent(command.locationName)}`
+                );
+                if (geoRes.ok) {
+                    const geo = await geoRes.json();
+                    endLat = geo.lat;
+                    endLng = geo.lon;
+                    console.log(`Nominatim: ${geo.displayName} → ${endLat}, ${endLng}`);
+                }
+            } catch (e) {
+                console.warn('Геокодинг не вдався, використовуємо координати Gemini:', e);
+            }
+        }
+
         setTimeout(() => {
             closeAssistant();
-
-            // Перемикаємо на дороги якщо потрібно
-            if (typeof changeLayer === 'function') {
+            /*if (typeof changeLayer === 'function') {
                 changeLayer('roads');
                 document.getElementById('layerType').value = 'roads';
-            }
-
-            // Будуємо маршрут
+            }*/
             if (typeof buildRouteToCoords === 'function') {
-                buildRouteToCoords(command.endLat, command.endLng, command.locationName);
+                buildRouteToCoords(endLat, endLng, command.locationName);
             }
         }, 1500);
-
     } else if (command.action === 'buildingType') {
         const mobilityType = command.mobilityType || 'all';
         if (typeof changeMobilityType === 'function') {
@@ -166,10 +179,10 @@ async function executeCommand(command) {
         setTimeout(() => {
             closeAssistant();
 
-            if (typeof changeLayer === 'function') {
+            /*if (typeof changeLayer === 'function') {
                 changeLayer('roads');
                 document.getElementById('layerType').value = 'roads';
-            }
+            }*/
 
             if (typeof findAndRouteToBuildingType === 'function') {
                 findAndRouteToBuildingType(command.type, command.mode || 'route');

@@ -1,6 +1,20 @@
 {
   "accessibility_criteria": [
     {
+      "type": "Люди без проблем із мобільністю",
+      "criteria": {
+        "wheelchair": "no",
+        "lit": "yes",
+        "tactile_paving": "no",
+        "surface": [ "asphalt", "concrete", "concrete:plates", "paving_stones" ],
+        "smoothness": [ "excellent", "good" ],
+        "width": {
+          "value": 1.2,
+          "comparator": "more"
+        }
+      }
+    },
+    {
       "type": "Люди з порушеннями зору (незрячі)",
       "criteria": {
         "wheelchair": "no",

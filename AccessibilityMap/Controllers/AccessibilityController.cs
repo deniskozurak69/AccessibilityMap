@@ -1284,6 +1284,8 @@
             public string ImagePath { get; set; } = "";
             public double? Lat { get; set; }
             public double? Lon { get; set; }
+            public double? RoadLat { get; set; }
+            public double? RoadLon { get; set; }
             public string? NearestRoadId { get; set; }
             public string? NearestRoadName { get; set; }
             public string? RoadType { get; set; } // "sidewalk" або "edge"
@@ -1433,6 +1435,8 @@
                     NearestRoadName = nearestName,
                     RoadType = roadType,
                     MlResults = mlResults,
+                    RoadLat = roadLat != 0 ? roadLat : null,  // ← додай
+                    RoadLon = roadLon != 0 ? roadLon : null,  // ← додай
                 };
 
                 await SaveReport(report);

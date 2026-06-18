@@ -42,8 +42,10 @@ function displayRoads(roadsToShow) {
             direction: 'top'
         });
 
-        polyline.on('click', () => showRoadInfo(road));
-        roadPolylines.push(polyline);
+        polyline.on('click', () => {
+            if (routingMode) return;
+            showRoadInfo(road);
+        });
     });
 }
 
@@ -65,8 +67,10 @@ function displayBridgeRoads(bridges) {
             direction: 'top'
         });
 
-        polyline.on('click', () => showBridgeInfo(bridge));
-        roadPolylines.push(polyline);
+        polyline.on('click', () => {
+            if (routingMode) return;
+            showBridgeInfo(bridge);
+        });
     });
 }
 
@@ -110,7 +114,10 @@ async function loadReroutedBridges() {
                 dashArray: bridge.color === '#9CA3AF' ? '4, 4' : null
             }).addTo(map);
             polyline.bindTooltip(bridge.name, { permanent: false, direction: 'top' });
-            polyline.on('click', () => showBridgeInfo(bridge));
+            polyline.on('click', () => {
+                if (routingMode) return;
+                showBridgeInfo(bridge);
+            });
             reroutedBridgePolylines.push(polyline);
         });
 

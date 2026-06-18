@@ -110,6 +110,39 @@ namespace KyivAccessibilityMap.Controllers
             }
         }
 
+        [HttpGet("geocode")]
+        public async Task<ActionResult<object>> Geocode([FromQuery] string query)
+        {
+            try
+            {
+                var encoded = Uri.EscapeDataString(query + ", Київ, Україна");
+                var url = $"https://nominatim.openstreetmap.org/search?q={encoded}&format=json&limit=1&countrycodes=ua";
+
+                _http.DefaultRequestHeaders.UserAgent.ParseAdd("KyivAccessibilityMap/1.0");
+                var response = await _http.GetAsync(url);
+                var json = await response.Content.ReadAsStringAsync();
+
+                using var doc = JsonDocument.Parse(json);
+                var results = doc.RootElement;
+
+                if (results.GetArrayLength() == 0)
+                    return NotFound(new { message = "Локацію не знайдено" });
+
+                var first = results[0];
+                var lat = double.Parse(first.GetProperty("lat").GetString()!,
+                                       System.Globalization.CultureInfo.InvariantCulture);
+                var lon = double.Parse(first.GetProperty("lon").GetString()!,
+                                       System.Globalization.CultureInfo.InvariantCulture);
+                var displayName = first.GetProperty("display_name").GetString();
+
+                return Ok(new { lat, lon, displayName });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = ex.Message });
+            }
+        }
+
         // ── Системний промпт ──────────────────────────────────────────────────
         private string BuildSystemPrompt(List<string> mobilityTypes)
         {
@@ -130,7 +163,7 @@ namespace KyivAccessibilityMap.Controllers
 КРОК 3Б (якщо вибрав Б): Запитай що цікавить — найближчий маршрут чи найдоступніший об'єкт. Потім запитай тип об'єкту з варіантів: Громадська вбиральня, Лікарня, Укриття, Паркінг, Підземний паркінг. Поверни JSON-команду.
 
 ВАЖЛИВО: Коли маєш всі дані — обов'язково постав JSON-команду в кінці відповіді у такому форматі (між тегами):
-<CMD>{{""action"":""route"",""endLat"":50.4513,""endLng"":30.5136,""mobilityType"":""Wheelchair users"",""locationName"":""Золоті ворота""}}</CMD>
+<CMD>{{""action"":""route"",""endLat"":50.45132,""endLng"":30.51364,""mobilityType"":""Wheelchair users"",""locationName"":""Золоті ворота""}}</CMD>
 або
 <CMD>{{""action"":""buildingType"",""type"":""Лікарня"",""mode"":""route"",""mobilityType"":""all""}}</CMD>
 

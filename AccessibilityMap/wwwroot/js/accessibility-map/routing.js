@@ -11,7 +11,7 @@ function toggleRoutingMode() {
         clearRoute();
         btn.textContent = 'Скасувати маршрут';
         btn.classList.add('active');
-        alert('Клацніть на карті щоб обрати точку S, потім точку F');
+        alert('Клацніть на карті щоб обрати точку старту, потім точку фінішу');
         map.on('click', handleMapClickForRoute);
     } else {
         btn.textContent = 'Побудувати маршрут';
@@ -76,7 +76,7 @@ async function buildRoute() {
         }
 
         displayRoute(data);
-        alert(`Маршрут побудовано!\n\nВідстань: ${data.totalDistanceKm.toFixed(2)} км\nВершин: ${data.nodeCount}`);
+        alert(`Маршрут побудовано!\n\nВідстань: ${data.totalDistanceKm.toFixed(2)} км`);
 
         routingMode = false;
         document.getElementById('routingBtn').textContent = 'Побудувати маршрут';
@@ -157,24 +157,20 @@ let buildingSearchResults = [];
 function initBuildingSearch() {
     const input = document.getElementById('buildingSearchInput');
     const dropdown = document.getElementById('buildingSearchDropdown');
-
     input.addEventListener('input', () => {
         const query = input.value.trim().toLowerCase();
         if (query.length < 2) {
             dropdown.style.display = 'none';
             return;
         }
-
         buildingSearchResults = buildings.filter(b =>
             (b.fullName || '').toLowerCase().includes(query) ||
             (b.address || '').toLowerCase().includes(query)
         ).slice(0, 10);
-
         if (buildingSearchResults.length === 0) {
             dropdown.style.display = 'none';
             return;
         }
-
         dropdown.innerHTML = buildingSearchResults.map((b, i) => `
             <div class="building-option" onclick="selectBuilding(${i})">
                 <div class="building-option-name">${b.fullName || 'Без назви'}</div>
@@ -183,10 +179,44 @@ function initBuildingSearch() {
         `).join('');
         dropdown.style.display = 'block';
     });
-
     document.addEventListener('click', e => {
         if (!e.target.closest('.building-search-wrapper')) {
             dropdown.style.display = 'none';
+        }
+    });
+
+    // ── Мобільний пошук ──
+    const mobileInput = document.getElementById('buildingSearchInputMobile');
+    const mobileDropdown = document.getElementById('buildingSearchDropdownMobile');
+    if (!mobileInput || !mobileDropdown) return;
+
+    mobileInput.addEventListener('input', () => {
+        const query = mobileInput.value.trim().toLowerCase();
+        if (query.length < 2) {
+            mobileDropdown.style.display = 'none';
+            return;
+        }
+        buildingSearchResults = buildings.filter(b =>
+            (b.fullName || '').toLowerCase().includes(query) ||
+            (b.address || '').toLowerCase().includes(query)
+        ).slice(0, 10);
+        if (buildingSearchResults.length === 0) {
+            mobileDropdown.style.display = 'none';
+            return;
+        }
+        mobileDropdown.innerHTML = buildingSearchResults.map((b, i) => `
+            <div class="building-option" onclick="selectBuilding(${i}); closeMobileFilters()">
+                <div class="building-option-name">${b.fullName || 'Без назви'}</div>
+                <div class="building-option-addr">${b.address}</div>
+            </div>
+        `).join('');
+        mobileDropdown.style.display = 'block';
+    });
+
+    document.addEventListener('click', e => {
+        if (!e.target.closest('#buildingSearchInputMobile') &&
+            !e.target.closest('#buildingSearchDropdownMobile')) {
+            mobileDropdown.style.display = 'none';
         }
     });
 }
@@ -235,7 +265,7 @@ async function buildRouteToBuilding(building) {
         }
 
         displayRoute(data);
-        alert(`Маршрут до "${building.fullName || building.address}"\n\nВідстань: ${data.totalDistanceKm.toFixed(2)} км\nВершин: ${data.nodeCount}`);
+        alert(`Маршрут до "${building.fullName || building.address}"\n\nВідстань: ${data.totalDistanceKm.toFixed(2)} км`);
 
     } catch (error) {
         hideLoading();

@@ -110,8 +110,7 @@ function showRoadInfo(road) {
     panel.innerHTML = `
         <div class="info-header">
             <div>
-                <h3>🛣️ ${road.name || `Дорога ID: ${road.id}`}</h3>
-                <p>Тип: ${road.type}</p>
+                <p>Тип дороги: ${road.type}</p>
             </div>
             <button class="close-btn" onclick="closeInfoPanel()">×</button>
         </div>
@@ -155,7 +154,7 @@ function showRoadInfo(road) {
             <button onclick="openReportForRoad(${JSON.stringify(road).replace(/"/g, '&quot;')})"
                     style="margin-top:1rem; width:100%; padding:0.6rem; background:#2563eb; color:white;
                            border:none; border-radius:0.375rem; cursor:pointer; font-size:0.875rem; font-weight:500;">
-                📷 Повідомити про проблему на цій дорозі
+                📷 Повідомити про стан дороги
             </button>
         </div>
     `;

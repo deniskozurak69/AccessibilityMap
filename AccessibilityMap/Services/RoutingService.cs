@@ -65,10 +65,10 @@ namespace KyivAccessibilityMap.Services
             // Штраф за відсотком відповідності
             double percentage = nearest.Percentage;
             if (percentage >= 1.0) return 1.0;
-            if (percentage >= 0.75) return 1.5;
-            if (percentage >= 0.50) return 2.5;
-            if (percentage >= 0.25) return 5.0;
-            return 10.0;
+            if (percentage >= 0.67) return 2.0;
+            if (percentage >= 0.34) return 5.0;
+            if (percentage >= 0.17) return 10.0;
+            return 20.0;
         }
 
         // A* алгоритм пошуку найкоротшого шляху

@@ -9,7 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewData["Title"]</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
             font-family: 'Segoe UI', system-ui, sans-serif;
@@ -36,33 +40,35 @@
             box-shadow: 0 25px 50px rgba(0,0,0,0.5);
         }
 
-        .login-box h1 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #f1f5f9;
-            margin-bottom: 0.5rem;
-        }
+            .login-box h1 {
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: #f1f5f9;
+                margin-bottom: 0.5rem;
+            }
 
-        .login-box p {
-            color: #94a3b8;
-            font-size: 0.875rem;
-            margin-bottom: 2rem;
-        }
+            .login-box p {
+                color: #94a3b8;
+                font-size: 0.875rem;
+                margin-bottom: 2rem;
+            }
 
-        .login-box input {
-            width: 100%;
-            padding: 0.75rem 1rem;
-            background: #0f172a;
-            border: 1px solid #334155;
-            border-radius: 0.5rem;
-            color: #f1f5f9;
-            font-size: 0.875rem;
-            margin-bottom: 1rem;
-            outline: none;
-            transition: border-color 0.2s;
-        }
+            .login-box input {
+                width: 100%;
+                padding: 0.75rem 1rem;
+                background: #0f172a;
+                border: 1px solid #334155;
+                border-radius: 0.5rem;
+                color: #f1f5f9;
+                font-size: 0.875rem;
+                margin-bottom: 1rem;
+                outline: none;
+                transition: border-color 0.2s;
+            }
 
-        .login-box input:focus { border-color: #3b82f6; }
+                .login-box input:focus {
+                    border-color: #3b82f6;
+                }
 
         .login-btn {
             width: 100%;
@@ -77,7 +83,9 @@
             transition: background 0.2s;
         }
 
-        .login-btn:hover { background: #2563eb; }
+            .login-btn:hover {
+                background: #2563eb;
+            }
 
         .login-error {
             color: #f87171;
@@ -87,7 +95,9 @@
         }
 
         /* ── Панель ── */
-        .admin-panel { display: none; }
+        .admin-panel {
+            display: none;
+        }
 
         .header {
             background: #1e293b;
@@ -98,10 +108,22 @@
             justify-content: space-between;
         }
 
-        .header h1 { font-size: 1.25rem; font-weight: 700; color: #f1f5f9; }
-        .header p { font-size: 0.8rem; color: #64748b; }
+            .header h1 {
+                font-size: 1.25rem;
+                font-weight: 700;
+                color: #f1f5f9;
+            }
 
-        .header-actions { display: flex; gap: 0.75rem; align-items: center; }
+            .header p {
+                font-size: 0.8rem;
+                color: #64748b;
+            }
+
+        .header-actions {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+        }
 
         .badge {
             background: #3b82f6;
@@ -123,12 +145,24 @@
             transition: all 0.2s;
         }
 
-        .logout-btn:hover { border-color: #f87171; color: #f87171; }
+            .logout-btn:hover {
+                border-color: #f87171;
+                color: #f87171;
+            }
 
-        .content { padding: 2rem; max-width: 1400px; margin: 0 auto; }
+        .content {
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
 
         /* ── Статистика ── */
-        .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 2rem; }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
 
         .stat-card {
             background: #1e293b;
@@ -137,11 +171,31 @@
             padding: 1.25rem;
         }
 
-        .stat-card .label { font-size: 0.75rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; }
-        .stat-card .value { font-size: 2rem; font-weight: 700; color: #f1f5f9; margin-top: 0.25rem; }
-        .stat-card.pending .value { color: #fbbf24; }
-        .stat-card.approved .value { color: #34d399; }
-        .stat-card.rejected .value { color: #f87171; }
+            .stat-card .label {
+                font-size: 0.75rem;
+                color: #64748b;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+            }
+
+            .stat-card .value {
+                font-size: 2rem;
+                font-weight: 700;
+                color: #f1f5f9;
+                margin-top: 0.25rem;
+            }
+
+            .stat-card.pending .value {
+                color: #fbbf24;
+            }
+
+            .stat-card.approved .value {
+                color: #34d399;
+            }
+
+            .stat-card.rejected .value {
+                color: #f87171;
+            }
 
         /* ── Список звітів ── */
         .reports-grid {
@@ -158,7 +212,9 @@
             transition: border-color 0.2s;
         }
 
-        .report-card:hover { border-color: #475569; }
+            .report-card:hover {
+                border-color: #475569;
+            }
 
         .report-photo {
             width: 100%;
@@ -178,7 +234,9 @@
             font-size: 2rem;
         }
 
-        .report-body { padding: 1.25rem; }
+        .report-body {
+            padding: 1.25rem;
+        }
 
         .report-meta {
             display: flex;
@@ -187,15 +245,41 @@
             margin-bottom: 1rem;
         }
 
-        .report-road { font-weight: 600; color: #f1f5f9; font-size: 0.9rem; }
-        .report-date { font-size: 0.75rem; color: #64748b; }
-        .report-gps { font-size: 0.75rem; color: #3b82f6; margin-top: 0.25rem; }
+        .report-road {
+            font-weight: 600;
+            color: #f1f5f9;
+            font-size: 0.9rem;
+        }
+
+        .report-date {
+            font-size: 0.75rem;
+            color: #64748b;
+        }
+
+        .report-gps {
+            font-size: 0.75rem;
+            color: #3b82f6;
+            margin-top: 0.25rem;
+        }
 
         /* ── ML результати ── */
-        .ml-results { margin-bottom: 1rem; }
-        .ml-results-title { font-size: 0.75rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+        .ml-results {
+            margin-bottom: 1rem;
+        }
 
-        .ml-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; }
+        .ml-results-title {
+            font-size: 0.75rem;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .ml-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.4rem;
+        }
 
         .ml-item {
             background: #0f172a;
@@ -206,23 +290,48 @@
             align-items: center;
         }
 
-        .ml-key { font-size: 0.7rem; color: #64748b; }
-        .ml-value { font-size: 0.75rem; font-weight: 600; color: #e2e8f0; }
-        .ml-conf { font-size: 0.65rem; color: #475569; }
-
-        /* ── Редагування ── */
-        .edit-section { margin-bottom: 1rem; }
-        .edit-section summary {
-            font-size: 0.75rem;
-            color: #94a3b8;
-            cursor: pointer;
-            user-select: none;
-            margin-bottom: 0.5rem;
+        .ml-key {
+            font-size: 0.7rem;
+            color: #64748b;
         }
 
-        .edit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-top: 0.5rem; }
+        .ml-value {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #e2e8f0;
+        }
 
-        .edit-field label { display: block; font-size: 0.7rem; color: #64748b; margin-bottom: 0.2rem; }
+        .ml-conf {
+            font-size: 0.65rem;
+            color: #475569;
+        }
+
+        /* ── Редагування ── */
+        .edit-section {
+            margin-bottom: 1rem;
+        }
+
+            .edit-section summary {
+                font-size: 0.75rem;
+                color: #94a3b8;
+                cursor: pointer;
+                user-select: none;
+                margin-bottom: 0.5rem;
+            }
+
+        .edit-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .edit-field label {
+            display: block;
+            font-size: 0.7rem;
+            color: #64748b;
+            margin-bottom: 0.2rem;
+        }
 
         .edit-field select, .edit-field input {
             width: 100%;
@@ -236,7 +345,10 @@
         }
 
         /* ── Кнопки дій ── */
-        .report-actions { display: flex; gap: 0.5rem; }
+        .report-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
 
         .btn-approve {
             flex: 1;
@@ -251,7 +363,9 @@
             transition: all 0.2s;
         }
 
-        .btn-approve:hover { background: #047857; }
+            .btn-approve:hover {
+                background: #047857;
+            }
 
         .btn-reject {
             flex: 1;
@@ -266,7 +380,9 @@
             transition: all 0.2s;
         }
 
-        .btn-reject:hover { background: #7f1d1d; }
+            .btn-reject:hover {
+                background: #7f1d1d;
+            }
 
         /* ── Порожньо ── */
         .empty-state {
@@ -276,8 +392,14 @@
             grid-column: 1 / -1;
         }
 
-        .empty-state .icon { font-size: 3rem; margin-bottom: 1rem; }
-        .empty-state p { font-size: 0.875rem; }
+            .empty-state .icon {
+                font-size: 3rem;
+                margin-bottom: 1rem;
+            }
+
+            .empty-state p {
+                font-size: 0.875rem;
+            }
 
         /* ── Toast ── */
         .toast {
@@ -294,9 +416,22 @@
             transition: all 0.3s;
         }
 
-        .toast.show { transform: translateY(0); opacity: 1; }
-        .toast.success { background: #065f46; color: #34d399; border: 1px solid #059669; }
-        .toast.error { background: #450a0a; color: #f87171; border: 1px solid #dc2626; }
+            .toast.show {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            .toast.success {
+                background: #065f46;
+                color: #34d399;
+                border: 1px solid #059669;
+            }
+
+            .toast.error {
+                background: #450a0a;
+                color: #f87171;
+                border: 1px solid #dc2626;
+            }
 
         .loading-overlay {
             display: none;
@@ -310,94 +445,210 @@
             color: #94a3b8;
         }
 
-        .loading-overlay.show { display: flex; }
+            .loading-overlay.show {
+                display: flex;
+            }
+
+        .header-nav {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .nav-btn {
+            padding: 0.4rem 0.9rem;
+            border-radius: 0.375rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+            cursor: pointer;
+            border: 1px solid #475569;
+            background: transparent;
+            color: #94a3b8;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+
+            .nav-btn:hover {
+                border-color: #94a3b8;
+                color: #f1f5f9;
+            }
+
+            .nav-btn.active {
+                background: #3b82f6;
+                border-color: #3b82f6;
+                color: white;
+            }
     </style>
 </head>
 
 <body>
 
-<!-- ── Екран логіну ── -->
-<div class="login-screen" id="loginScreen">
-    <div class="login-box">
-        <h1>🔐 Панель адміністратора</h1>
-        <p>Карта доступності Києва</p>
-        <input type="password" id="passwordInput" placeholder="Введіть пароль" />
-        <div class="login-error" id="loginError">Невірний пароль</div>
-        <button class="login-btn" onclick="login()">Увійти</button>
+    <!-- ── Екран логіну ── -->
+    <div class="login-screen" id="loginScreen">
+        <div class="login-box">
+            <h1>🔐 Панель адміністратора</h1>
+            <p>Карта доступності Києва</p>
+            <input type="password" id="passwordInput" placeholder="Введіть пароль" />
+            <div class="login-error" id="loginError">Невірний пароль</div>
+            <button class="login-btn" onclick="login()">Увійти</button>
+        </div>
     </div>
-</div>
 
-<!-- ── Панель адміна ── -->
-<div class="admin-panel" id="adminPanel">
-    <div class="header">
-        <div>
-            <h1>🗺️ Панель адміністратора</h1>
-            <p>Управління звітами користувачів</p>
+    <!-- ── Панель адміна ── -->
+    <div class="admin-panel" id="adminPanel">
+        <div class="header">
+            <div>
+                <h1>🗺️ Панель адміністратора</h1>
+                <p>Управління звітами користувачів</p>
                 <div class="header-nav">
-                    <a href="/Admin/Reports" class="nav-btn">📋 Звіти</a>
-                    <a href="/Admin/Roads" class="nav-btn active">🗺️ Дороги</a>
-                    <a href="/Admin/Training" class="nav-btn">🤖 Моделі</a>
+                    <a href="/Admin/Reports" class="nav-btn active">📋 Обробка звітів</a>
+                    <a href="/Admin/Roads" class="nav-btn">🗺️ Ручне редагування</a>
+                    <a href="/Admin/Training" class="nav-btn">🤖 Оновлення моделей</a>
                 </div>
+            </div>
+            <div class="header-actions">
+                <span class="badge" id="pendingCount">0</span>
+                <span style="color:#64748b; font-size:0.8rem;">очікують</span>
+                <button class="logout-btn" onclick="logout()">Вийти</button>
+            </div>
         </div>
-        <div class="header-actions">
-            <span class="badge" id="pendingCount">0</span>
-            <span style="color:#64748b; font-size:0.8rem;">очікують</span>
-            <button class="logout-btn" onclick="logout()">Вийти</button>
+
+        <div class="content">
+            <!-- Статистика -->
+            <div class="stats">
+                <div class="stat-card pending">
+                    <div class="label">Очікують</div>
+                    <div class="value" id="statPending">—</div>
+                </div>
+                <div class="stat-card approved">
+                    <div class="label">Підтверджено</div>
+                    <div class="value" id="statApproved">—</div>
+                </div>
+                <div class="stat-card rejected">
+                    <div class="label">Відхилено</div>
+                    <div class="value" id="statRejected">—</div>
+                </div>
+            </div>
+
+            <!-- Список звітів -->
+            <div class="reports-grid" id="reportsGrid">
+                <div class="empty-state">
+                    <div class="icon">⏳</div>
+                    <p>Завантаження звітів...</p>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="content">
-        <!-- Статистика -->
-        <div class="stats">
-            <div class="stat-card pending">
-                <div class="label">Очікують</div>
-                <div class="value" id="statPending">—</div>
-            </div>
-            <div class="stat-card approved">
-                <div class="label">Підтверджено</div>
-                <div class="value" id="statApproved">—</div>
-            </div>
-            <div class="stat-card rejected">
-                <div class="label">Відхилено</div>
-                <div class="value" id="statRejected">—</div>
-            </div>
-        </div>
+    <div class="toast" id="toast"></div>
+    <div class="loading-overlay" id="loadingOverlay">Обробка...</div>
 
-        <!-- Список звітів -->
-        <div class="reports-grid" id="reportsGrid">
-            <div class="empty-state">
-                <div class="icon">⏳</div>
-                <p>Завантаження звітів...</p>
-            </div>
-        </div>
-    </div>
-</div>
+    <script>
+        // ── Пароль (в реальному проекті зберігати на сервері) ──
+        const ADMIN_PASSWORD = 'admin123';
 
-<div class="toast" id="toast"></div>
-<div class="loading-overlay" id="loadingOverlay">Обробка...</div>
-
-<script>
-    // ── Пароль (в реальному проекті зберігати на сервері) ──
-    const ADMIN_PASSWORD = 'admin123';
-
-    function login() {
-        const pwd = document.getElementById('passwordInput').value;
-        if (pwd === ADMIN_PASSWORD) {
-            document.getElementById('loginScreen').style.display = 'none';
-            document.getElementById('adminPanel').style.display = 'block';
-            loadReports();
-        } else {
-            document.getElementById('loginError').style.display = 'block';
+        function login() {
+            const pwd = document.getElementById('passwordInput').value;
+            if (pwd === ADMIN_PASSWORD) {
+                document.getElementById('loginScreen').style.display = 'none';
+                document.getElementById('adminPanel').style.display = 'block';
+                loadReports();
+            } else {
+                document.getElementById('loginError').style.display = 'block';
+            }
         }
-    }
 
-                const ML_NORMALIZE = {
+        const ML_NORMALIZE = {
             lit:  { 'lit': 'yes', 'unlit': 'no' },
             ramp: { 'ramp': 'yes', 'no_ramp': 'no' },
-            // smoothness (нерівність): slight/severe/smooth — збігається напряму
-            // surface_quality (якість): excellent/good/intermediate/bad/very_bad — збігається напряму
-            // surface_type: asphalt/concrete/... — збігається напряму
         };
+
+        // ── Переклад значень ML для відображення на панелі ──
+        const ML_VALUE_LABELS = {
+            // Нерівність (smoothness)
+            smooth:       'Гладкий',
+            slight:       'Нерівний',
+            severe:       'Дуже нерівний',
+            // Якість покриття (surface_quality)
+            excellent:    'Чудова',
+            good:         'Гарна',
+            intermediate: 'Середня',
+            bad:          'Погана',
+            very_bad:     'Дуже погана',
+            // Тип покриття (surface_type)
+            asphalt:       'Асфальт',
+            concrete:      'Бетон',
+            paving_stones: 'Бруківка',
+            sett:          'Кругляк',
+            gravel:        'Гравій',
+            unpaved:       'Грунтова',
+            // Освітлення
+            yes:  'Наявне',
+            no:   'Відсутнє',
+            // Ширина
+            wide:   'Широкий',
+            narrow: 'Вузький',
+            // Пандус і тактильна (yes/no вже покриті вище,
+            // але ramp/no_ramp ще можуть прийти до нормалізації)
+            ramp:    'Наявний',
+            no_ramp: 'Відсутній',
+            lit:     'Наявне',
+            unlit:   'Відсутнє',
+        };
+
+        // Контекстні переклади — коли значення yes/no означає різне залежно від поля
+        const ML_VALUE_LABELS_BY_KEY = {
+            lit: {
+                yes: 'Наявне',
+                no:  'Відсутнє',
+                lit: 'Наявне',
+                unlit: 'Відсутнє',
+            },
+            ramp: {
+                yes:     'Наявний',
+                no:      'Відсутній',
+                ramp:    'Наявний',
+                no_ramp: 'Відсутній',
+            },
+            tactile_paving: {
+                yes: 'Наявна',
+                no:  'Відсутня',
+            },
+            smoothness: {
+                smooth: 'Гладкий',
+                slight: 'Нерівний',
+                severe: 'Дуже нерівний',
+            },
+            surface_quality: {
+                excellent:    'Чудова',
+                good:         'Гарна',
+                intermediate: 'Середня',
+                bad:          'Погана',
+                very_bad:     'Дуже погана',
+            },
+            surface_type: {
+                asphalt:       'Асфальт',
+                concrete:      'Бетон',
+                paving_stones: 'Бруківка',
+                sett:          'Кругляк',
+                gravel:        'Гравій',
+                unpaved:       'Грунтова',
+            },
+            width: {
+                wide:   'Широкий',
+                narrow: 'Вузький',
+            },
+        };
+
+        // Повертає людиночитабельну назву значення ML з урахуванням ключа
+        function mlLabel(key, rawValue) {
+            if (!rawValue) return rawValue;
+            const byKey = ML_VALUE_LABELS_BY_KEY[key];
+            if (byKey && byKey[rawValue] !== undefined) return byKey[rawValue];
+            return ML_VALUE_LABELS[rawValue] || rawValue;
+        }
 
         function mlValue(report, key) {
             const raw = report.mlResults?.[key]?.class ?? '';
@@ -409,7 +660,7 @@
             return c != null ? `${(c * 100).toFixed(0)}%` : '';
         }
 
-                function buildSelect(id, fieldSuffix, options, mlSelected) {
+        function buildSelect(id, fieldSuffix, options, mlSelected) {
             const opts = options.map(([val, label]) => {
                 const sel = val !== '' && val === mlSelected ? 'selected' : '';
                 return `<option value="${val}" ${sel}>${label}</option>`;
@@ -417,87 +668,85 @@
             return `<select id="${fieldSuffix}-${id}">${opts}</select>`;
         }
 
-    document.getElementById('passwordInput').addEventListener('keydown', e => {
-        if (e.key === 'Enter') login();
-    });
+        document.getElementById('passwordInput').addEventListener('keydown', e => {
+            if (e.key === 'Enter') login();
+        });
 
-    function logout() {
-        document.getElementById('adminPanel').style.display = 'none';
-        document.getElementById('loginScreen').style.display = 'flex';
-        document.getElementById('passwordInput').value = '';
-    }
-
-    // ── Завантаження звітів ──
-    async function loadReports() {
-        try {
-            const res = await fetch('/api/accessibility/admin/reports');
-            const reports = await res.json();
-
-            updateStats(reports);
-            renderReports(reports);
-        } catch (e) {
-            showToast('Помилка завантаження звітів', 'error');
-        }
-    }
-
-    function updateStats(reports) {
-        const pending  = reports.filter(r => r.status === 'pending').length;
-        const approved = reports.filter(r => r.status === 'approved').length;
-        const rejected = reports.filter(r => r.status === 'rejected').length;
-
-        document.getElementById('statPending').textContent  = pending;
-        document.getElementById('statApproved').textContent = approved;
-        document.getElementById('statRejected').textContent = rejected;
-        document.getElementById('pendingCount').textContent = pending;
-    }
-
-    function renderReports(reports) {
-        const grid = document.getElementById('reportsGrid');
-        const pending = reports.filter(r => r.status === 'pending');
-
-        if (pending.length === 0) {
-            grid.innerHTML = `
-                <div class="empty-state">
-                    <div class="icon">✅</div>
-                    <p>Немає звітів що очікують перевірки</p>
-                </div>`;
-            return;
+        function logout() {
+            document.getElementById('adminPanel').style.display = 'none';
+            document.getElementById('loginScreen').style.display = 'flex';
+            document.getElementById('passwordInput').value = '';
         }
 
-        grid.innerHTML = pending.map(r => reportCard(r)).join('');
-    }
+        // ── Завантаження звітів ──
+        async function loadReports() {
+            try {
+                const res = await fetch('/api/accessibility/admin/reports');
+                const reports = await res.json();
 
-                    function reportCard(report) {
+                updateStats(reports);
+                renderReports(reports);
+            } catch (e) {
+                showToast('Помилка завантаження звітів', 'error');
+            }
+        }
+
+        function updateStats(reports) {
+            const pending  = reports.filter(r => r.status === 'pending').length;
+            const approved = reports.filter(r => r.status === 'approved').length;
+            const rejected = reports.filter(r => r.status === 'rejected').length;
+
+            document.getElementById('statPending').textContent  = pending;
+            document.getElementById('statApproved').textContent = approved;
+            document.getElementById('statRejected').textContent = rejected;
+            document.getElementById('pendingCount').textContent = pending;
+        }
+
+        function renderReports(reports) {
+            const grid = document.getElementById('reportsGrid');
+            const pending = reports.filter(r => r.status === 'pending');
+
+            if (pending.length === 0) {
+                grid.innerHTML = `
+                    <div class="empty-state">
+                        <div class="icon">✅</div>
+                        <p>Немає звітів що очікують перевірки</p>
+                    </div>`;
+                return;
+            }
+
+            grid.innerHTML = pending.map(r => reportCard(r)).join('');
+        }
+
+        function reportCard(report) {
             const date = new Date(report.createdAt).toLocaleString('uk-UA');
             const gps = report.lat
                 ? `📍 ${report.lat.toFixed(5)}, ${report.lon.toFixed(5)}`
                 : '📍 GPS не визначено';
 
+            // ML-блок — відображаємо перекладені значення
             const mlHtml = Object.entries(report.mlResults || {}).map(([key, val]) => `
                 <div class="ml-item">
                     <span class="ml-key">${formatKey(key)}</span>
                     <div style="text-align:right">
-                        <div class="ml-value">${val.class}</div>
+                        <div class="ml-value">${mlLabel(key, val.class)}</div>
                         <div class="ml-conf">${(val.confidence * 100).toFixed(0)}%</div>
                     </div>
                 </div>
             `).join('');
 
-            // ML-значення для кожного поля
+            // ML-значення для полів редагування (внутрішні коди, не переклади)
             const mlSurface    = mlValue(report, 'surface_type');
-            const mlSmoothness = mlValue(report, 'surface_quality'); // якість: excellent/good/...
+            const mlSmoothness = mlValue(report, 'surface_quality');
             const mlLit        = mlValue(report, 'lit');
             const mlTactile    = mlValue(report, 'tactile_paving');
             const mlWidth      = mlValue(report, 'width');
             const mlRamp       = mlValue(report, 'ramp');
-            const mlRoughness  = mlValue(report, 'smoothness'); // нерівність: slight/severe/smooth
+            const mlRoughness  = mlValue(report, 'smoothness');
 
-            // Ширина: модель може повернути "wide"/"narrow" або числове значення
-            // Якщо число — підставляємо в input, якщо категорія — залишаємо порожнім
             const widthNumeric = parseFloat(mlWidth);
             const widthDefault = !isNaN(widthNumeric) ? widthNumeric : '';
 
-            // Конфіденції для підказок у мітках
             function confBadge(key) {
                 const c = mlConf(report, key);
                 return c ? `<span style="color:#3b82f6; font-size:0.6rem; margin-left:0.25rem;">(ML: ${c})</span>` : '';
@@ -505,47 +754,58 @@
 
             const surfaceSelect = buildSelect(report.id, 'surface', [
                 ['',              '— не змінювати —'],
-                ['asphalt',       'asphalt'],
-                ['concrete',      'concrete'],
-                ['paving_stones', 'paving_stones'],
-                ['sett',          'sett'],
-                ['gravel',        'gravel'],
-                ['unpaved',       'unpaved'],
+                ['asphalt',       'Асфальт'],
+                ['concrete',      'Бетон'],
+                ['paving_stones', 'Бруківка'],
+                ['sett',          'Кругляк'],
+                ['gravel',        'Гравій'],
+                ['unpaved',       'Грунтова'],
             ], mlSurface);
 
             const smoothnessSelect = buildSelect(report.id, 'smoothness', [
                 ['',             '— не змінювати —'],
-                ['excellent',    'excellent'],
-                ['good',         'good'],
-                ['intermediate', 'intermediate'],
-                ['bad',          'bad'],
-                ['very_bad',     'very_bad'],
+                ['excellent',    'Чудова'],
+                ['good',         'Гарна'],
+                ['intermediate', 'Середня'],
+                ['bad',          'Погана'],
+                ['very_bad',     'Дуже погана'],
             ], mlSmoothness);
 
             const litSelect = buildSelect(report.id, 'lit', [
                 ['',    '— не змінювати —'],
-                ['yes', 'yes'],
-                ['no',  'no'],
+                ['yes', 'Наявне'],
+                ['no',  'Відсутнє'],
             ], mlLit);
 
             const tactileSelect = buildSelect(report.id, 'tactile', [
                 ['',    '— не змінювати —'],
-                ['yes', 'yes'],
-                ['no',  'no'],
+                ['yes', 'Наявна'],
+                ['no',  'Відсутня'],
             ], mlTactile);
 
             const rampSelect = buildSelect(report.id, 'ramp', [
                 ['',    '— не змінювати —'],
-                ['yes', 'yes'],
-                ['no',  'no'],
+                ['yes', 'Наявний'],
+                ['no',  'Відсутній'],
             ], mlRamp);
 
             const roughnessSelect = buildSelect(report.id, 'roughness', [
                 ['',        '— не змінювати —'],
-                ['smooth',  'smooth'],
-                ['slight',  'slight'],
-                ['severe',  'severe'],
+                ['smooth',  'Гладкий'],
+                ['slight',  'Нерівний'],
+                ['severe',  'Дуже нерівний'],
             ], mlRoughness);
+
+            // Ширина: якщо ML повертає wide/narrow — показуємо select, якщо число — input
+            const widthIsNumeric = !isNaN(parseFloat(mlWidth)) && mlWidth !== '';
+            const widthField = widthIsNumeric
+                ? `<input type="number" step="0.1" id="width-${report.id}"
+                          placeholder="напр. 1.5" value="${widthDefault}">`
+                : buildSelect(report.id, 'width', [
+                    ['',       '— не змінювати —'],
+                    ['wide',   'Широкий'],
+                    ['narrow', 'Вузький'],
+                  ], mlWidth);
 
             return `
             <div class="report-card" id="card-${report.id}">
@@ -554,13 +814,16 @@
                     : `<div class="report-photo-placeholder">🖼️</div>`
                 }
                 <div class="report-body">
-                    <div class="report-meta">
-                        <div>
-                            <div class="report-road">${report.nearestRoadName || 'Дорога не визначена'}</div>
-                            <div class="report-gps">${gps}</div>
-                        </div>
-                        <div class="report-date">${date}</div>
-                    </div>
+                            <div class="report-meta">
+            <div>
+                <div class="report-road">${report.nearestRoadName || 'Дорога не визначена'}</div>
+                <div class="report-gps">${gps}</div>
+                        ${report.roadLat ? `<div style="font-size:0.7rem; color:#475569; margin-top:0.2rem;">
+            🛣️ Координати дороги: ${report.roadLat.toFixed(5)}, ${report.roadLon.toFixed(5)}
+        </div>` : ''}
+            </div>
+            <div class="report-date">${date}</div>
+        </div>
 
                     <div class="ml-results">
                         <div class="ml-results-title">Результати ML моделей</div>
@@ -591,10 +854,8 @@
                                 ${tactileSelect}
                             </div>
                             <div class="edit-field">
-                                <label>Ширина (м) ${confBadge('width')}</label>
-                                <input type="number" step="0.1" id="width-${report.id}"
-                                       placeholder="напр. 1.5"
-                                       value="${widthDefault}">
+                                <label>Ширина ${confBadge('width')}</label>
+                                ${widthField}
                             </div>
                             <div class="edit-field">
                                 <label>Пандус ${confBadge('ramp')}</label>
@@ -607,80 +868,81 @@
                         </div>
                     </details>
 
-                            <div class="report-actions">
-            <button class="btn-approve" onclick="approveReport('${report.id}')">✓ Підтвердити</button>
-            <button class="btn-reject"  onclick="rejectReport('${report.id}')">✗ Відхилити</button>
-        </div>
-        <button onclick="openDatasetModal('${report.id}')"
-                style="margin-top:0.5rem; width:100%; padding:0.5rem; background:transparent;
-                       color:#94a3b8; border:1px solid #475569; border-radius:0.375rem;
-                       font-size:0.75rem; cursor:pointer; transition: all 0.2s;"
-                onmouseover="this.style.borderColor='#3b82f6';this.style.color='#3b82f6'"
-                onmouseout="this.style.borderColor='#475569';this.style.color='#94a3b8'">
-            📦 Додати до датасету
-        </button>
+                    <div class="report-actions">
+                        <button class="btn-approve" onclick="approveReport('${report.id}')">✓ Підтвердити</button>
+                        <button class="btn-reject"  onclick="rejectReport('${report.id}')">✗ Відхилити</button>
+                    </div>
+                    <button onclick="openDatasetModal('${report.id}')"
+                            style="margin-top:0.5rem; width:100%; padding:0.5rem; background:transparent;
+                                   color:#94a3b8; border:1px solid #475569; border-radius:0.375rem;
+                                   font-size:0.75rem; cursor:pointer; transition: all 0.2s;"
+                            onmouseover="this.style.borderColor='#3b82f6';this.style.color='#3b82f6'"
+                            onmouseout="this.style.borderColor='#475569';this.style.color='#94a3b8'">
+                        📦 Додати до датасету
+                    </button>
                 </div>
             </div>`;
         }
 
-    function formatKey(key) {
-        const labels = {
-            smoothness:      'Нерівність',
-            ramp:            'Пандус',
-            width:           'Ширина',
-            lit:             'Освітлення',
-            tactile_paving:  'Тактильна',
-            surface_type:    'Тип покриття',
-            surface_quality: 'Якість',
-        };
-        return labels[key] || key;
-    }
-
-    // ── Підтвердження ──
-    async function approveReport(id) {
-        const updatedData = collectEdits(id);
-        document.getElementById('loadingOverlay').classList.add('show');
-
-        try {
-            const res = await fetch(`/api/accessibility/admin/reports/${id}/approve`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(updatedData)
-            });
-
-            if (!res.ok) throw new Error();
-            document.getElementById(`card-${id}`)?.remove();
-            showToast('Звіт підтверджено, дані оновлено ✓', 'success');
-            await loadReports();
-        } catch {
-            showToast('Помилка підтвердження', 'error');
-        } finally {
-            document.getElementById('loadingOverlay').classList.remove('show');
+        // ── Підписи ключів ML ──
+        function formatKey(key) {
+            const labels = {
+                smoothness:      'Нерівність',
+                ramp:            'Пандус',
+                width:           'Ширина',
+                lit:             'Освітлення',
+                tactile_paving:  'Тактильна',
+                surface_type:    'Тип покриття',
+                surface_quality: 'Якість',
+            };
+            return labels[key] || key;
         }
-    }
 
-    // ── Відхилення ──
-    async function rejectReport(id) {
-        document.getElementById('loadingOverlay').classList.add('show');
+        // ── Підтвердження ──
+        async function approveReport(id) {
+            const updatedData = collectEdits(id);
+            document.getElementById('loadingOverlay').classList.add('show');
 
-        try {
-            const res = await fetch(`/api/accessibility/admin/reports/${id}/reject`, {
-                method: 'POST'
-            });
+            try {
+                const res = await fetch(`/api/accessibility/admin/reports/${id}/approve`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(updatedData)
+                });
 
-            if (!res.ok) throw new Error();
-            document.getElementById(`card-${id}`)?.remove();
-            showToast('Звіт відхилено', 'error');
-            await loadReports();
-        } catch {
-            showToast('Помилка відхилення', 'error');
-        } finally {
-            document.getElementById('loadingOverlay').classList.remove('show');
+                if (!res.ok) throw new Error();
+                document.getElementById(`card-${id}`)?.remove();
+                showToast('Звіт підтверджено, дані оновлено ✓', 'success');
+                await loadReports();
+            } catch {
+                showToast('Помилка підтвердження', 'error');
+            } finally {
+                document.getElementById('loadingOverlay').classList.remove('show');
+            }
         }
-    }
 
-    // ── Збір відредагованих даних ──
-                    function collectEdits(id) {
+        // ── Відхилення ──
+        async function rejectReport(id) {
+            document.getElementById('loadingOverlay').classList.add('show');
+
+            try {
+                const res = await fetch(`/api/accessibility/admin/reports/${id}/reject`, {
+                    method: 'POST'
+                });
+
+                if (!res.ok) throw new Error();
+                document.getElementById(`card-${id}`)?.remove();
+                showToast('Звіт відхилено', 'error');
+                await loadReports();
+            } catch {
+                showToast('Помилка відхилення', 'error');
+            } finally {
+                document.getElementById('loadingOverlay').classList.remove('show');
+            }
+        }
+
+        // ── Збір відредагованих даних ──
+        function collectEdits(id) {
             const data = {};
 
             const surface    = document.getElementById(`surface-${id}`)?.value;
@@ -695,21 +957,22 @@
             if (smoothness) data.smoothness     = smoothness;
             if (lit)        data.lit            = lit;
             if (tactile)    data.tactile_paving = tactile;
-            if (width)      data.width          = parseFloat(width);
+            if (width)      data.width          = isNaN(parseFloat(width)) ? width : parseFloat(width);
             if (ramp)       data.ramp           = ramp;
             if (roughness)  data.roughness      = roughness;
 
             return data;
         }
 
-    // ── Toast ──
-    function showToast(msg, type = 'success') {
-        const toast = document.getElementById('toast');
-        toast.textContent = msg;
-        toast.className = `toast ${type} show`;
-        setTimeout(() => toast.classList.remove('show'), 3000);
-    }
-            let _datasetReportId = null;
+        // ── Toast ──
+        function showToast(msg, type = 'success') {
+            const toast = document.getElementById('toast');
+            toast.textContent = msg;
+            toast.className = `toast ${type} show`;
+            setTimeout(() => toast.classList.remove('show'), 3000);
+        }
+
+        let _datasetReportId = null;
 
         function openDatasetModal(reportId) {
             _datasetReportId = reportId;
@@ -754,7 +1017,6 @@
                 return;
             }
 
-            // Збираємо відредаговані значення з форми картки
             const editedValues = {
                 surface:         document.getElementById(`surface-${id}`)?.value || '',
                 surface_quality: document.getElementById(`smoothness-${id}`)?.value || '',
@@ -764,10 +1026,12 @@
                 ramp:            document.getElementById(`ramp-${id}`)?.value || '',
                 smoothness:      document.getElementById(`roughness-${id}`)?.value || '',
             };
-                    console.log('editedValues:', editedValues);
-        console.log('selected:', selected);
+
+            console.log('editedValues:', editedValues);
+            console.log('selected:', selected);
+
             try {
-                        const res = await fetch(`/api/accessibility/reports/${id}/add-to-dataset`, {
+                const res = await fetch(`/api/accessibility/reports/${id}/add-to-dataset`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ classifiers: selected, editedValues })
@@ -786,11 +1050,12 @@
                 showToast('Помилка: ' + e.message, 'error');
             }
         }
-</script>
+    </script>
+
     <div id="datasetModal" style="display:none; position:fixed; inset:0;
      background:rgba(0,0,0,0.6); z-index:9999; align-items:center; justify-content:center;">
         <div style="background:#1e293b; border:1px solid #334155; border-radius:0.75rem;
-                padding:1.5rem; width:360px; box-shadow:0 25px 50px rgba(0,0,0,0.5);">
+            padding:1.5rem; width:360px; box-shadow:0 25px 50px rgba(0,0,0,0.5);">
             <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
                 <h3 style="font-size:1rem; font-weight:600; color:#f1f5f9;">📦 Додати до датасету</h3>
                 <button onclick="closeDatasetModal()"
@@ -805,12 +1070,12 @@
             <div style="display:flex; gap:0.5rem; justify-content:flex-end;">
                 <button onclick="closeDatasetModal()"
                         style="padding:0.5rem 1rem; background:transparent; border:1px solid #475569;
-                           color:#94a3b8; border-radius:0.375rem; font-size:0.8rem; cursor:pointer;">
+                       color:#94a3b8; border-radius:0.375rem; font-size:0.8rem; cursor:pointer;">
                     Скасувати
                 </button>
                 <button onclick="submitToDataset()"
                         style="padding:0.5rem 1rem; background:#1d4ed8; border:none; color:white;
-                           border-radius:0.375rem; font-size:0.8rem; font-weight:600; cursor:pointer;">
+                       border-radius:0.375rem; font-size:0.8rem; font-weight:600; cursor:pointer;">
                     Додати
                 </button>
             </div>

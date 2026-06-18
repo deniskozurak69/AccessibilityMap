@@ -263,9 +263,9 @@
 <div class="header">
     <h1>🛣️ Редагування доріг — Адмін-панель</h1>
     <div class="header-nav">
-        <a href="/Admin/Reports" class="nav-btn">📋 Звіти</a>
-        <a href="/Admin/Roads" class="nav-btn active">🗺️ Дороги</a>
-            <a href="/Admin/Training" class="nav-btn">🤖 Моделі</a>
+        <a href="/Admin/Reports" class="nav-btn">📋 Обробка звітів</a>
+        <a href="/Admin/Roads" class="nav-btn active">🗺️ Ручне редагування</a>
+            <a href="/Admin/Training" class="nav-btn">🤖 Оновлення моделей</a>
     </div>
 </div>
 
@@ -401,19 +401,19 @@
                     [seg.coordinates[i + 1][0], seg.coordinates[i + 1][1]]
                 ];
 
-                const pl = L.polyline(coords, {
-                    color: '#3b82f6',
-                    weight: 3,
-                    opacity: 0.7
-                }).addTo(map);
+                        const pl = L.polyline(coords, {
+            color: seg.color || '#3b82f6',  // ← використовуємо колір з сервера
+            weight: 3,
+            opacity: 0.7
+        }).addTo(map);
 
-                pl.on('click', (e) => {
-                    L.DomEvent.stopPropagation(e);
-                    if (mode === 'select') selectSegment(seg, pl);
-                });
+                                pl.on('click', (e) => {
+            L.DomEvent.stopPropagation(e);
+            if (mode === 'select') selectSegment(seg, pl, seg.color || '#3b82f6');
+        });
 
-                pl.on('mouseover', () => { if (mode === 'select') pl.setStyle({ color: '#60a5fa', weight: 5 }); });
-                pl.on('mouseout',  () => { if (pl !== highlightPolyline) pl.setStyle({ color: '#3b82f6', weight: 3 }); });
+        pl.on('mouseover', () => { if (mode === 'select') pl.setStyle({ color: '#60a5fa', weight: 5 }); });
+        pl.on('mouseout',  () => { if (pl !== highlightPolyline) pl.setStyle({ color: seg.color || '#3b82f6', weight: 3 }); });
 
                 polylines.push(pl);
             }
@@ -470,18 +470,20 @@
     }
 
     // ── Вибір існуючого сегменту ─────────────────────────────────────────────
-    function selectSegment(seg, polyline) {
-        // Скидаємо попередній highlight
-        if (highlightPolyline) {
-            highlightPolyline.setStyle({ color: '#3b82f6', weight: 3 });
+            let originalColor = '#3b82f6'; // колір до виділення
+
+        function selectSegment(seg, polyline, segColor) {
+            if (highlightPolyline) {
+                highlightPolyline.setStyle({ color: originalColor, weight: 3 });
+            }
+
+            originalColor = segColor; // запам'ятовуємо перед виділенням
+            selectedSegment = seg;
+            highlightPolyline = polyline;
+            polyline.setStyle({ color: '#3b82f6', weight: 5 }); // виділяємо синім
+
+            showEditForm(seg);
         }
-
-        selectedSegment = seg;
-        highlightPolyline = polyline;
-        polyline.setStyle({ color: '#f59e0b', weight: 5 });
-
-        showEditForm(seg);
-    }
 
     // ── Форма редагування існуючого ──────────────────────────────────────────
             function showEditForm(seg) {
@@ -696,8 +698,8 @@
     // ── Скасування / очищення ────────────────────────────────────────────────
     function cancelEdit() {
         // Скидаємо highlight
-        if (highlightPolyline) {
-            highlightPolyline.setStyle({ color: '#3b82f6', weight: 3 });
+            if (highlightPolyline) {
+            highlightPolyline.setStyle({ color: originalColor, weight: 3 });
             highlightPolyline = null;
         }
         selectedSegment = null;

@@ -294,3 +294,40 @@ body {
     font-size: 0.75rem;
     color: #6b7280;
 }
+
+@media (max-width: 768px) {
+    .map-container {
+        height: calc(100dvh - 56px);
+    }
+
+    .info-panel {
+        position: fixed !important;
+        top: auto !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        max-height: 90dvh !important;
+        border-radius: 1rem 1rem 0 0 !important;
+        box-shadow: 0 -4px 20px rgba(0,0,0,0.15) !important;
+        z-index: 1200 !important;
+    }
+
+    .info-content {
+        padding-bottom: 3rem !important;
+    }
+
+    .info-header h3 {
+        font-size: 0.95rem !important;
+    }
+
+    .close-btn {
+        min-width: 36px;
+        min-height: 36px;
+        font-size: 1.5rem !important;
+    }
+
+    .score-value {
+        font-size: 1.1rem !important;
+    }
+}

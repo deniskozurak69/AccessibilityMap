@@ -21,21 +21,22 @@ function hideLoading() {
 function populateMobilityTypes() {
     const select = document.getElementById('mobilityType');
     const types = new Set();
-
     if (buildingRequirements && buildingRequirements.types) {
         buildingRequirements.types.forEach(type => types.add(type.type));
     }
-
     if (roadRequirements && roadRequirements.accessibility_criteria) {
         roadRequirements.accessibility_criteria.forEach(criteria => types.add(criteria.type));
     }
-
     Array.from(types).forEach(type => {
         const option = document.createElement('option');
         option.value = type;
         option.textContent = type;
         select.appendChild(option);
     });
+
+    // Синхронізуємо мобільний селект
+    const mobileDst = document.getElementById('mobilityTypeMobile');
+    if (mobileDst) mobileDst.innerHTML = select.innerHTML;
 }
 
 function isRoadCriteriaRequired(key, roadCriteria) {
