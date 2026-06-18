@@ -32,20 +32,22 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
     app.UseHttpsRedirection();
 }
+
 app.UseStaticFiles();
 app.UseRouting();
 app.UseCors("AllowAll");
 app.UseAuthorization();
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
 app.Run();
 
 async Task EnsureLocalFiles(WebApplication app)
 {
     var env = app.Services.GetRequiredService<IWebHostEnvironment>();
     var config = app.Services.GetRequiredService<IConfiguration>();
-
     var localPath = Path.Combine(env.ContentRootPath, "data", "kyiv_buildings.json");
     if (File.Exists(localPath)) return;
 
@@ -55,7 +57,7 @@ async Task EnsureLocalFiles(WebApplication app)
 
     Console.WriteLine("⏳ Завантаження kyiv_buildings.json з GCS...");
 
-    var credential = GoogleCredential.FromFile(keyPath);
+    var credential = GetCredential(keyPath);
     var storageClient = await StorageClient.CreateAsync(credential);
 
     Directory.CreateDirectory(Path.GetDirectoryName(localPath)!);
@@ -63,4 +65,14 @@ async Task EnsureLocalFiles(WebApplication app)
     await storageClient.DownloadObjectAsync(bucketName, "data/kyiv_buildings.json", fileStream);
 
     Console.WriteLine("✅ kyiv_buildings.json завантажено");
+}
+
+GoogleCredential GetCredential(string keyPath)
+{
+    var json = Environment.GetEnvironmentVariable("GCLOUD_KEY_JSON");
+    if (!string.IsNullOrEmpty(json))
+    {
+        return GoogleCredential.FromJson(json);
+    }
+    return GoogleCredential.FromFile(keyPath);
 }
