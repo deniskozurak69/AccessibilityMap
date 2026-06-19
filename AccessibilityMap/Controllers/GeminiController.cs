@@ -19,6 +19,15 @@ namespace KyivAccessibilityMap.Controllers
             _http = httpFactory.CreateClient();
         }
 
+        // ── Отримати API ключ: спершу з env-змінної (Render), потім з appsettings.json (локально) ──
+        private string GetApiKey()
+        {
+            var envKey = Environment.GetEnvironmentVariable("GeminiApiKey");
+            if (!string.IsNullOrEmpty(envKey))
+                return envKey;
+            return _config["GeminiApiKey"] ?? "";
+        }
+
         // ── Отримати типи мобільності ─────────────────────────────────────────
         [HttpGet("mobility-types")]
         public async Task<ActionResult<object>> GetMobilityTypes()
@@ -57,7 +66,7 @@ namespace KyivAccessibilityMap.Controllers
         {
             try
             {
-                var apiKey = _config["GeminiApiKey"];
+                var apiKey = GetApiKey();
                 if (string.IsNullOrEmpty(apiKey))
                     return StatusCode(500, new { message = "GeminiApiKey не налаштовано" });
 
