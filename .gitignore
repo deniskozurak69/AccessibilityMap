@@ -7,4 +7,4 @@ AccessibilityMap/data/kyiv_buildings.json
 AccessibilityMap/wwwroot/uploads/
 Keys/
 *.json
-AccessibilityMap/Keys/
+AccessibilityMap/Keys/"appsettings.json" 
