@@ -38,6 +38,19 @@ namespace KyivAccessibilityMap.Controllers
             _config = config;
         }
 
+        // ── Отримати credentials: спершу з env-змінної (Render, Base64), потім з файлу (локально) ──
+        private GoogleCredential GetCredential()
+        {
+            var base64 = Environment.GetEnvironmentVariable("GCLOUD_KEY_JSON");
+            if (!string.IsNullOrEmpty(base64))
+            {
+                var jsonBytes = Convert.FromBase64String(base64);
+                var json = System.Text.Encoding.UTF8.GetString(jsonBytes);
+                return GoogleCredential.FromJson(json);
+            }
+            return GoogleCredential.FromFile(KeyFilePath);
+        }
+
         // ── Список класифікаторів і статус моделей ────────────────────────────
         [HttpGet("classifiers")]
         public async Task<ActionResult<object>> GetClassifiers()
@@ -96,7 +109,7 @@ namespace KyivAccessibilityMap.Controllers
                 if (clf == null)
                     return NotFound(new { message = $"Класифікатор '{classifierId}' не знайдено" });
 
-                var credential = GoogleCredential.FromFile(KeyFilePath)
+                var credential = GetCredential()
                     .CreateScoped("https://www.googleapis.com/auth/cloud-platform");
 
                 var clientBuilder = new JobServiceClientBuilder
@@ -166,7 +179,7 @@ namespace KyivAccessibilityMap.Controllers
         {
             try
             {
-                var credential = GoogleCredential.FromFile(KeyFilePath)
+                var credential = GetCredential()
                     .CreateScoped("https://www.googleapis.com/auth/cloud-platform");
 
                 var clientBuilder = new JobServiceClientBuilder
@@ -203,7 +216,7 @@ namespace KyivAccessibilityMap.Controllers
         {
             try
             {
-                var credential = GoogleCredential.FromFile(KeyFilePath)
+                var credential = GetCredential()
                     .CreateScoped("https://www.googleapis.com/auth/cloud-platform");
 
                 var clientBuilder = new JobServiceClientBuilder
@@ -219,7 +232,6 @@ namespace KyivAccessibilityMap.Controllers
                 var result = new List<object>();
                 await foreach (var job in jobs)
                 {
-                    //if (job.State == JobState.Failed) continue;
                     result.Add(new
                     {
                         name = job.DisplayName,
@@ -311,7 +323,7 @@ namespace KyivAccessibilityMap.Controllers
         // ── Допоміжні методи ──────────────────────────────────────────────────
         private async Task<StorageClient> CreateStorageClient()
         {
-            var credential = GoogleCredential.FromFile(KeyFilePath);
+            var credential = GetCredential();
             return await StorageClient.CreateAsync(credential);
         }
 
