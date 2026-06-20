@@ -132,7 +132,7 @@ namespace KyivAccessibilityMap.Controllers
                             {
                                 MachineSpec = new MachineSpec
                                 {
-                                    MachineType = "n1-standard-4",
+                                    MachineType = "n1-standard-8",
                                 },
                                 ReplicaCount = 1,
                                 ContainerSpec = new ContainerSpec
