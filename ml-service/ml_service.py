@@ -147,12 +147,12 @@ MODEL_CONFIGS = {
         "arch": "efficientnet",
     },
     "ramp": {
-        "file": "ramp_dinov2.pth",
+        "file": "ramp_efficientnet.pth",
         "classes": {0: "no_ramp", 1: "ramp"},
         "arch": "dino_seq",
     },
     "width": {
-        "file": "width_dinov2.pth",
+        "file": "width_efficientnet.pth",
         "classes": {0: "narrow", 1: "wide"},
         "arch": "dino_seq",
     },
@@ -162,17 +162,17 @@ MODEL_CONFIGS = {
         "arch": "dino_seq",
     },
     "tactile_paving": {
-        "file": "tactile_dinov2.pth",
+        "file": "tactile_efficientnet.pth",
         "classes": {0: "no", 1: "yes"},
         "arch": "dino_seq",
     },
     "surface_type": {
-        "file": "dinov2_surface_type.pth",
+        "file": "efficientnet_surface_type.pth",
         "classes": {0: "asphalt", 1: "concrete", 2: "sett", 3: "paving_stones", 4: "unpaved"},
         "arch": "dino_bn",
     },
     "surface_quality": {
-        "file": "dinov2_surface_quality.pth",
+        "file": "efficientnet_surface_quality.pth",
         "classes": {0: "excellent", 1: "good", 2: "intermediate", 3: "bad", 4: "very_bad"},
         "arch": "dino_bn",
     },
