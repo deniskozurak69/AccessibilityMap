@@ -1344,7 +1344,8 @@
                 if (!string.IsNullOrEmpty(modelsParam))
                     form.Add(new StringContent(modelsParam), "models");
 
-                var mlResponse = await httpClient.PostAsync("http://localhost:8000/classify", form);
+                var mlServiceUrl = Environment.GetEnvironmentVariable("ML_SERVICE_URL") ?? "http://localhost:8000";
+var mlResponse = await httpClient.PostAsync($"{mlServiceUrl}/classify", form);
 
                 if (!mlResponse.IsSuccessStatusCode)
                 {
