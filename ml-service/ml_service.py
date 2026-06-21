@@ -157,7 +157,7 @@ MODEL_CONFIGS = {
         "arch": "dino_seq",
     },
     "lit": {
-        "file": "lit_dinov2.pth",
+        "file": "lit_efficientnet.pth",
         "classes": {0: "unlit", 1: "lit"},
         "arch": "dino_seq",
     },
